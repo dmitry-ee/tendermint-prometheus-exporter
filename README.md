@@ -1,1 +1,3 @@
-# minter-prometheus-exporter
+# Tendermint Prometheus Exporter
+
+### TODO: Make Readme
