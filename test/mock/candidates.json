@@ -1,0 +1,1176 @@
+{
+	"jsonrpc": "2.0",
+	"id": "",
+	"result": [
+		{
+			"reward_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"owner_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"total_stake": "164774559877925343518",
+			"pub_key": "Mp4ae1ee73e6136c85b0ca933a9a1347758a334885f10b3238398a67ac2eb153b8",
+			"commission": "100",
+			"created_at_block": "1",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"owner_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"total_stake": "30195000000000000000",
+			"pub_key": "Mp738da41ba6a7b7d69b7294afa158b89c5a1b410cbf0c2443c85c5fe24ad1dd1c",
+			"commission": "100",
+			"created_at_block": "1",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"owner_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"total_stake": "611067972604556625564",
+			"pub_key": "Mp6f16c1ff21a6fb946aaed0f4c1fcca272b72fd904988f91d3883282b8ae31ba2",
+			"commission": "100",
+			"created_at_block": "1",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"owner_address": "Mx18467bbb64a8edf890201d526c35957d82be3d95",
+			"total_stake": "86116637313807063721",
+			"pub_key": "Mp9e13f2f5468dd782b316444fbd66595e13dba7d7bd3efa1becd50b42045f58c6",
+			"commission": "100",
+			"created_at_block": "1",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx5b29f5427a7b8a4552cdcd6cb7309ea97c623f60",
+			"owner_address": "Mx5d7621d967893be139533ce1bf9fa4ee8c26e2b0",
+			"total_stake": "132038387311749429409964745",
+			"pub_key": "Mp46d3d6afe0084fcf530b03d1f4427e516a1cb4ec542640bcbc84c2c4b4f53c13",
+			"commission": "10",
+			"created_at_block": "2",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx5d7621d967893be139533ce1bf9fa4ee8c26e2b0",
+			"owner_address": "Mx5d7621d967893be139533ce1bf9fa4ee8c26e2b0",
+			"total_stake": "7619753722108768091",
+			"pub_key": "Mpb54df5b1abc46ecdb08935d6fc2f4526eba27caf1b6f2f87b3477ef3119bc0fd",
+			"commission": "10",
+			"created_at_block": "3",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx0a7683dcef2a125740baf7ecef0e9041e9fdd711",
+			"owner_address": "Mx5ebe7e09717478cc85975bf455ed692114117799",
+			"total_stake": "85142931285143916492806198",
+			"pub_key": "Mp01cc99ae5a349ecaeef187dcbb12816bf2b3d8eae80f654034b21213aa445b2c",
+			"commission": "10",
+			"created_at_block": "4",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx1a0ef8c32307e0d139a2e86f3c476fefa94dc90a",
+			"owner_address": "Mxa147683dc63fd6b11c0f72aafa05449c61dd250b",
+			"total_stake": "178510045039553444473337402",
+			"pub_key": "Mp629b5528f09d1c74a83d18414f2e4263e14850c47a3fac3f855f200111111111",
+			"commission": "1",
+			"created_at_block": "5",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx2a7d9c366231676809a8b2bf938a1b32542f7384",
+			"owner_address": "Mx3e25d6197f5432160cdacb31377b07bfe1819be6",
+			"total_stake": "39373413066874519653227656",
+			"pub_key": "Mp65758496f8a5d626cac77f5a38894beae0050fdef862da201964cd2fd8111111",
+			"commission": "10",
+			"created_at_block": "6",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx6355b16c3df0d69088546a27a0cc88af9599d3fb",
+			"owner_address": "Mxbcc7245d8a76a8d9febbf2b575b08beb85a22288",
+			"total_stake": "8160472918067164497783225",
+			"pub_key": "Mp14d5f76de9ddc5c3eb7ed24af7de91274c9156de4585a01d2731e75c0fc65170",
+			"commission": "5",
+			"created_at_block": "11",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx6c4e5afade3823fa950b460bd2df0b7459e3bac2",
+			"owner_address": "Mx61c483b83c724da3b4708848426aad03bd0dbb98",
+			"total_stake": "44692694876672176550424378",
+			"pub_key": "Mp3b6e2632cd0c91ef96ea4f4a16f554ff1b4dd41324fd421a0161947c50603b9b",
+			"commission": "10",
+			"created_at_block": "12",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx2ff2d24b6288890c007519d63d144e8d65613972",
+			"owner_address": "Mx10cfb51252ec2414e20d52a488f483f860dc62c2",
+			"total_stake": "33484091225819303211018129",
+			"pub_key": "Mp7979c5a8d974e0c8c99f568b91454853f0c48fbbe68ac39d40efd0b330f30885",
+			"commission": "7",
+			"created_at_block": "18",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx7a86fb0d770062decdca3dc5fed15800d5a65000",
+			"owner_address": "Mx58a1441883708813ba546345a0ed0ce765f1dad1",
+			"total_stake": "20095546381045920687243903",
+			"pub_key": "Mp77774337c2212ce5a9b57b9392daf5e11639f7fd38e1a16a584291ed3a98b777",
+			"commission": "10",
+			"created_at_block": "19",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx10c53f83ee25175eec77ef7f1836c3ed2f1a4145",
+			"owner_address": "Mx10c53f83ee25175eec77ef7f1836c3ed2f1a4145",
+			"total_stake": "2988826572600772483750",
+			"pub_key": "Mp351639d177c0fea50b7ff56388bb86a33573812faafc9b38266acb2264cdc426",
+			"commission": "10",
+			"created_at_block": "21",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx38412aec42ac58f77256445d0f58abe645b38c20",
+			"owner_address": "Mx38412aec42ac58f77256445d0f58abe645b38c20",
+			"total_stake": "10974926153534154691021960",
+			"pub_key": "Mpf979659e45f25defab5ef8624f8060e27b1440157f86779b12b98e7e293136cb",
+			"commission": "8",
+			"created_at_block": "23",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxaaa40f7d2e91705c75a0430557c469a5850aeaaa",
+			"owner_address": "Mx7a77cd2baf195c2e33194ef9f2ca7295452e1777",
+			"total_stake": "143735867616967351774321647",
+			"pub_key": "Mpaaaaa16ebd6af229b4cfc02c3ab40bd25c1051c3aa2120f07d08c1bd01777777",
+			"commission": "10",
+			"created_at_block": "26",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx6e0cd64694b1e143adaa7d4914080e748837aec9",
+			"owner_address": "Mxd5f1159a07cf913b08fbba443f3a8a2806ea87da",
+			"total_stake": "17096706992333931630888757",
+			"pub_key": "Mp02bc3c3f77d5ab9732ef9fc3801a6d72dc18f88328c14dc735648abfe551f50f",
+			"commission": "3",
+			"created_at_block": "28",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx2b42fe679b7f73ac111d6551507fcead8bba9787",
+			"owner_address": "Mxbfd4f73d4873d563f016b9f20ff89fda1ec3b377",
+			"total_stake": "15691258316793585625902081",
+			"pub_key": "Mp31d08d6f64f7a8a528ed2df77de2a02e4d8cefae93c771eb0b7de97322901215",
+			"commission": "9",
+			"created_at_block": "29",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx72f82017a10d095ca697db6f1fa86229a000feed",
+			"owner_address": "Mx4c40df842347c3edbc4b6e6183116825e4000cab",
+			"total_stake": "16848172965878533790374587",
+			"pub_key": "Mp5e3e1da62c7eabd9d8d168a36a92727fc1970a54ec61eadd285d4199c41191d7",
+			"commission": "6",
+			"created_at_block": "45",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx0ea540c1dbf72879ac70aedb0b4239e9dc5aa4c0",
+			"owner_address": "Mxb85bf4bbb42e3930f90a75f4ee2d5713079ef37a",
+			"total_stake": "31755441167769604184905329",
+			"pub_key": "Mp47f5c19c3ac5d66c960f36aa1a2d74ec8127f96308b67054332c988ee9eafaf0",
+			"commission": "10",
+			"created_at_block": "65",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxaefcd25409730463ee3ef8a7fe464b9aa861580a",
+			"owner_address": "Mxaefcd25409730463ee3ef8a7fe464b9aa861580a",
+			"total_stake": "28851076798489083814722",
+			"pub_key": "Mpf65c72db6432bcbc30c80f9fafc4e6e5fbd075b45e1c5ea0ec278f98aaf25161",
+			"commission": "3",
+			"created_at_block": "72",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx33d0e640442cf3f27602f427146bf5d87939a643",
+			"owner_address": "Mx33d0e640442cf3f27602f427146bf5d87939a643",
+			"total_stake": "30600116648397604054549",
+			"pub_key": "Mp06016a4f1059391d851fd675d522997999409fa18a27395f0fd088f3c01db2d2",
+			"commission": "5",
+			"created_at_block": "77",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx6bd82254070c1e22d9af6597fd57d9370ded7271",
+			"owner_address": "Mx03aeb974fb622a53f2fab5ba051272c1d284e9b8",
+			"total_stake": "291000000000000000000",
+			"pub_key": "Mp1fa0eb306e7acb01c29ee411d35713a370e101dec5ebf3b00d80171c59fe4847",
+			"commission": "10",
+			"created_at_block": "111",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx9cc228c3d84635c228e312da6d98ed36b6666666",
+			"owner_address": "Mx9cc228c3d84635c228e312da6d98ed36b6666666",
+			"total_stake": "3979457931152512924280",
+			"pub_key": "Mp5555554d1242b4edfc9f59dfa2d186498539af0c44d6f849282ac9e2276b4666",
+			"commission": "100",
+			"created_at_block": "371",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxb044f5f1c991e7d9dc311f946e0d7a8757000000",
+			"owner_address": "Mxb044f5f1c991e7d9dc311f946e0d7a8757000000",
+			"total_stake": "2862122266613059212121",
+			"pub_key": "Mp46045f236be01f1c2c431da3dcccb24cbf64cf7cfb9c52a1f87b372f60000000",
+			"commission": "50",
+			"created_at_block": "414",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx2276149c1bce32ce45e5499a6234eae3092cbb11",
+			"owner_address": "Mx2276149c1bce32ce45e5499a6234eae3092cbb11",
+			"total_stake": "12486010082366728914103857",
+			"pub_key": "Mp3ff4490148c0cf42a9780dbb24a08e012d30d6f371021d28f8e4d3a8e2d6d9cf",
+			"commission": "10",
+			"created_at_block": "522",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx5b806a5206a0a61ea58fec5e9f3377217fe48464",
+			"owner_address": "Mx2a362fabdbd12c7c9cdf3d0ca673c4418586105c",
+			"total_stake": "104611815466574738034665",
+			"pub_key": "Mp6ff5bd93c430e06e70ef9aff1eec8c617e03464bef2545180b9de1757fb578ac",
+			"commission": "5",
+			"created_at_block": "2204",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx8866c33141210f49650487b7e8b5049fafa2e80d",
+			"owner_address": "Mx8866c33141210f49650487b7e8b5049fafa2e80d",
+			"total_stake": "18680000000000000000",
+			"pub_key": "Mp406ebd90155ad2011040e5d80535853c89da26003b3968b101334748e09dba31",
+			"commission": "2",
+			"created_at_block": "5193",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx9999839a3e6c89296f72d1dadc9178988ecc4030",
+			"owner_address": "Mx9999839a3e6c89296f72d1dadc9178988ecc4030",
+			"total_stake": "120017019475776985240",
+			"pub_key": "Mpee580b2be5176c054beb65e7c0d5cbea6307d6e3dc1c8ba68e2ec6c9cc7f1ccc",
+			"commission": "1",
+			"created_at_block": "5437",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx18334f054a26955f339aa8f13af4961676e7379c",
+			"owner_address": "Mx18334f054a26955f339aa8f13af4961676e7379c",
+			"total_stake": "755826627664857777927",
+			"pub_key": "Mp2f4d5478540c2ecd03d8c584f59f1e552353af043d981f27f39ac9de6b0f2c78",
+			"commission": "100",
+			"created_at_block": "20816",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx171699d0de1484172578d851ae7989df0381e02a",
+			"owner_address": "Mx171699d0de1484172578d851ae7989df0381e02a",
+			"total_stake": "29000000000000000000",
+			"pub_key": "Mp18eb275830ff77f3d9d569a60bda2d926c02bd74172cacc9f3d2ba89e4398451",
+			"commission": "7",
+			"created_at_block": "75579",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxacc1902ed42c612a4337af34b3818829105ba617",
+			"owner_address": "Mxacc1902ed42c612a4337af34b3818829105ba617",
+			"total_stake": "106616546175506306868",
+			"pub_key": "Mp77774337c2212ce5a9b57b9392daf5e11639f7fd38e1a16a584291ed3a98b770",
+			"commission": "5",
+			"created_at_block": "78902",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx4a4e6b89a6120b0ddeba489438e77b4697cb124c",
+			"owner_address": "Mx4a4e6b89a6120b0ddeba489438e77b4697cb124c",
+			"total_stake": "0",
+			"pub_key": "Mpc0034386b60d6362857a09f64208faecc74fbbe4e49f4d41a5f68647eaa4f699",
+			"commission": "5",
+			"created_at_block": "91355",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxe87528c3ea9b693614d5ab84e50351a9cf59d83c",
+			"owner_address": "Mxe87528c3ea9b693614d5ab84e50351a9cf59d83c",
+			"total_stake": "96617828283348270538",
+			"pub_key": "Mpa24dad0dd31a1368086f283334d4866936c559c1e42c580ef016e2c74e93daac",
+			"commission": "5",
+			"created_at_block": "111748",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx6807808cebc4cde7c4fd6b336d111ca3f5af0000",
+			"owner_address": "Mxb044f5f1c991e7d9dc311f946e0d7a8757000000",
+			"total_stake": "28361567540738193108422616",
+			"pub_key": "Mp97a5a64cbbf65a3474beb0a0cbf8eb054b14a59623f1416580099f4433333333",
+			"commission": "3",
+			"created_at_block": "220318",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxdbea45033180b2aadc82cca820ec4d284e78ae06",
+			"owner_address": "Mxdbea45033180b2aadc82cca820ec4d284e78ae06",
+			"total_stake": "9493180409210669410625124",
+			"pub_key": "Mpadeb65fa666a4a8e033d20c1a48d09b3f024eb8756da7f7a21e0932582222222",
+			"commission": "2",
+			"created_at_block": "235138",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx8866c33141210f49650487b7e8b5049fafa2e80d",
+			"owner_address": "Mx8866c33141210f49650487b7e8b5049fafa2e80d",
+			"total_stake": "7467209090732312761766997",
+			"pub_key": "Mpaf167d3b1d37733928b28615f4168e79de3d45529945a3630a10e0767e03b6e3",
+			"commission": "10",
+			"created_at_block": "263173",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxfb166b09d27d825575d2e0aa70672c594e2b14da",
+			"owner_address": "Mxfb166b09d27d825575d2e0aa70672c594e2b14da",
+			"total_stake": "1368840389100647137026",
+			"pub_key": "Mp0b27c5a1248ddb7c84d32e090755b4dccd0e4361ce399bea03babce412d61e34",
+			"commission": "1",
+			"created_at_block": "297725",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx7926f1944b8faabb3b440b394543ae6f5b2f8f37",
+			"owner_address": "Mx7926f1944b8faabb3b440b394543ae6f5b2f8f37",
+			"total_stake": "1200588586775073848269",
+			"pub_key": "Mp3df654b34c167443ef52e8644266866813b92d4a6ff9c0245c259750a199a455",
+			"commission": "3",
+			"created_at_block": "302661",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx03aeb974fb622a53f2fab5ba051272c1d284e9b8",
+			"owner_address": "Mx03aeb974fb622a53f2fab5ba051272c1d284e9b8",
+			"total_stake": "59202511294987612330917260",
+			"pub_key": "Mpfe176f944623a8ca9f409a62f0ea3ca75c1cf8d89970adf9384fc9ae8d77fa0b",
+			"commission": "5",
+			"created_at_block": "373797",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx95bb3c572008c29c1e85ad1e5dab696b31b22820",
+			"owner_address": "Mx95bb3c572008c29c1e85ad1e5dab696b31b22820",
+			"total_stake": "500849158713918369613",
+			"pub_key": "Mp450d94370211d7e5cdf36caa60c02c72bea2f0bfee4c5274a84b921e4cedb5dd",
+			"commission": "8",
+			"created_at_block": "388687",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxdeb39282db431f5bd4f66584a78b6ed83fd800be",
+			"owner_address": "Mx07feb0115fc6aa792461c4c097616b7a54a5c7a2",
+			"total_stake": "6666791644678403870538718",
+			"pub_key": "Mp77f71834108e9b5e65237a39263631b4f99a9d58437a1385c930c13ee1d4e2a6",
+			"commission": "1",
+			"created_at_block": "412649",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx5ddacc162f5c083c5a2409fae91683c2c96e4a57",
+			"owner_address": "Mx5ddacc162f5c083c5a2409fae91683c2c96e4a57",
+			"total_stake": "140428584399816881008",
+			"pub_key": "Mp6998c821ce97fa853c43b33ad0e609b7bdf862754c7a090abb683dc0fb251f20",
+			"commission": "10",
+			"created_at_block": "442028",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx5b29f5427a7b8a4552cdcd6cb7309ea97c623f60",
+			"owner_address": "Mx5d7621d967893be139533ce1bf9fa4ee8c26e2b0",
+			"total_stake": "28053787304926171580748124",
+			"pub_key": "Mpd7a9eae76d3e98145b6b897c00c407b42ae8c42f937527ebdcd0239a4d88c0a5",
+			"commission": "10",
+			"created_at_block": "490790",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxa4db6ddceb2b8ea9b9e15a750a26c4cc94642f6f",
+			"owner_address": "Mx7dea43a4a8ad888881c1d2c6269a87fea555ed70",
+			"total_stake": "128944543160827313052",
+			"pub_key": "Mp06bbd0d7b8f474b1529907ab4fc0e56b425f167fc9b5cf2d499821f255555555",
+			"commission": "5",
+			"created_at_block": "669736",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx5342d7739d826f50c87825a129f267d8a0617dd5",
+			"owner_address": "Mx5342d7739d826f50c87825a129f267d8a0617dd5",
+			"total_stake": "0",
+			"pub_key": "Mp39956b42c91d686ab27d2d9d1feb3e8fb3432bade40999346938183a15756e7f",
+			"commission": "5",
+			"created_at_block": "680461",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx59bd7a6b4bc1d118ca41609b20833208df425886",
+			"owner_address": "Mxd4bafadd1fadd37c53f6964ceeca7e1f8467cb74",
+			"total_stake": "14317619208503156295294762",
+			"pub_key": "Mpc9fc1052e075054cdbfb6443a6d14d97be9d4f19a10505c4323b52a78ca4bb18",
+			"commission": "10",
+			"created_at_block": "684414",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx251282c0f37dba7ff7783886f0a69528d7ca21f7",
+			"owner_address": "Mx35dd5570fa907ba8afba0c5eb72ee53bf1f13aa4",
+			"total_stake": "314551909282101990389",
+			"pub_key": "Mp6a265b7e22206796d4b5066b5a7afcefcf0a399baa72e7961ca8ceae04eb967d",
+			"commission": "10",
+			"created_at_block": "733167",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx93ee1ea2ee88bd509b5d707f5deed7b50bd55c62",
+			"owner_address": "Mx93ee1ea2ee88bd509b5d707f5deed7b50bd55c62",
+			"total_stake": "501000000000000000000",
+			"pub_key": "Mp09c393da6c960fc90fa47feda7403a6854c9b126ba521f1fca9376af678f78e4",
+			"commission": "1",
+			"created_at_block": "816333",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx11e73806a0ca5c126f9db1b043006fadb393208d",
+			"owner_address": "Mx11e73806a0ca5c126f9db1b043006fadb393208d",
+			"total_stake": "11200000000000000000",
+			"pub_key": "Mp5556a73c604348ac2e465443870d35c7445c810966a5395c17caa080f27777aa",
+			"commission": "5",
+			"created_at_block": "825052",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx0aa2f3bd93b5d795b15e9e8f4b921f3a0ac8f7ab",
+			"owner_address": "Mx0aa2f3bd93b5d795b15e9e8f4b921f3a0ac8f7ab",
+			"total_stake": "66000000000000000000",
+			"pub_key": "Mp014d8e07b250342316a7ed20742d1ac7e2f769a59c568a8b18b115851c44a338",
+			"commission": "1",
+			"created_at_block": "840524",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx6fc395f53e7e61ac81a7c8d4439fa89236296a8b",
+			"owner_address": "Mx6fc395f53e7e61ac81a7c8d4439fa89236296a8b",
+			"total_stake": "0",
+			"pub_key": "Mpd6a8b2e825be9ea3568ea0b383f31a724099a54a6c29039139b8e350eac0b2d3",
+			"commission": "10",
+			"created_at_block": "852566",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx6fc395f53e7e61ac81a7c8d4439fa89236296a8b",
+			"owner_address": "Mx6fc395f53e7e61ac81a7c8d4439fa89236296a8b",
+			"total_stake": "990000000000000000",
+			"pub_key": "Mp86452a50c65b6161ce4012c07d3e2e69e0d5ae3fb8574b0094624081295bbff3",
+			"commission": "1",
+			"created_at_block": "870112",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx1648921f388ac563331e4321e95ae7f0bae72331",
+			"owner_address": "Mx1648921f388ac563331e4321e95ae7f0bae72331",
+			"total_stake": "124212194967827884605",
+			"pub_key": "Mpc4e52fa8c5eff10d0d9ba2c308aa3941bf87a335eb41dd38d8c15f16986242d8",
+			"commission": "2",
+			"created_at_block": "972709",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx9c56df3b2620f5e53f79424d32ba7f5b99bc65a0",
+			"owner_address": "Mx9c56df3b2620f5e53f79424d32ba7f5b99bc65a0",
+			"total_stake": "4067255087940302247",
+			"pub_key": "Mp32156f7357c8406997b9444c3af49959c7235340e0f27d339136d15b00622b06",
+			"commission": "4",
+			"created_at_block": "1009098",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx08a45fb19fcc6fb70542bcc1c681ef8afb3a816d",
+			"owner_address": "Mx51ac6b9a3ca26a01f7f7e4f725059e5fc6576578",
+			"total_stake": "43276316831306026438941534",
+			"pub_key": "Mp1ada5ac409b965623bf6a4320260190038ae27230abfb5ebc9158280cdffffff",
+			"commission": "5",
+			"created_at_block": "1009570",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx56f82305de6a92b66f025fa7f2af682f86d338c9",
+			"owner_address": "Mx5dfa4bc69d7785e3c355151b497539f520de90a7",
+			"total_stake": "28604498185567453537171089",
+			"pub_key": "Mp03478aae43a1a660573fab0763ae44492cdaf8deffc3fcbcc844acd67dfb2db6",
+			"commission": "3",
+			"created_at_block": "1013600",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx858b9133d040d723093655c928637310fd101010",
+			"owner_address": "Mx497030b8b62a3128ceead99e503cd42297777777",
+			"total_stake": "30464381109276854861129115",
+			"pub_key": "Mp999d3789d40ff0c699f861758bcafde15d3b4828c7518bc94810837688888888",
+			"commission": "7",
+			"created_at_block": "1026277",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxaaa40f7d2e91705c75a0430557c469a5850aeaaa",
+			"owner_address": "Mx7a77cd2baf195c2e33194ef9f2ca7295452e1777",
+			"total_stake": "100126186535716609659211105",
+			"pub_key": "Mpeee9614b63a7ed6370ccd1fa227222fa30d6106770145c55bd4b482b88888888",
+			"commission": "8",
+			"created_at_block": "1029243",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx8a35d3aaa148d644fb7cb45d960abd3236f85455",
+			"owner_address": "Mx8a35d3aaa148d644fb7cb45d960abd3236f85455",
+			"total_stake": "18330422734162118763957793",
+			"pub_key": "Mp4881ad167ca5fb5886322841f992d68aed894ffcb58abc080e8ad3b156f1045b",
+			"commission": "1",
+			"created_at_block": "1040887",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx311bbbf9a92b9b34593dc882488fee48f36535fa",
+			"owner_address": "Mx0e12a922970013f93a5bfe5c097ba0b071a1f0c8",
+			"total_stake": "28027704781405701114263021",
+			"pub_key": "Mp5ed0739ee51e77b3906a3fc63449f0564be1c9d5e307d720b3d4c52faf4976ae",
+			"commission": "4",
+			"created_at_block": "1078116",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx9c68d4150528b1329fa93a68f98c9966aa42cc4d",
+			"owner_address": "Mx9c68d4150528b1329fa93a68f98c9966aa42cc4d",
+			"total_stake": "6564258554047427595438",
+			"pub_key": "Mp61e4c579f159c5ac78f87e07386bcca576b8305bc427f9fe9713b4d50fca5e7b",
+			"commission": "1",
+			"created_at_block": "1095176",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx467a98568b7e5f166615a321bff8a724080eb3f3",
+			"owner_address": "Mx467a98568b7e5f166615a321bff8a724080eb3f3",
+			"total_stake": "54972157788271254806",
+			"pub_key": "Mp3d768be686261af2a5bdc47ecb580cb24d5918dcfcb92e58e8a25c6215de0fd6",
+			"commission": "15",
+			"created_at_block": "1184428",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx0f3794bdc6a424676db8f2cc62c6be0ff04f48b3",
+			"owner_address": "Mx0f3794bdc6a424676db8f2cc62c6be0ff04f48b3",
+			"total_stake": "170701192910500722432427",
+			"pub_key": "Mp2116b88b482dab262c646b9cf59bb7028fcaf0a58f67fca115cfb2595bde5ee2",
+			"commission": "5",
+			"created_at_block": "1227958",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx86ec23e0c12f2f1b15e38c1f39a0efb4a932041c",
+			"owner_address": "Mx78ae66aa1ccdf1eff093d877be6593d406066a60",
+			"total_stake": "8097757419381500756827431",
+			"pub_key": "Mp95b76c6893dc28a34f005b9708bac59eae238232ef86798d672387bbb849bd22",
+			"commission": "10",
+			"created_at_block": "1247353",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx57a39de0d19bc67b5d029c142b0dd90df4349b01",
+			"owner_address": "Mx57a39de0d19bc67b5d029c142b0dd90df4349b01",
+			"total_stake": "39402000000000000000",
+			"pub_key": "Mp992ec37346934eb4efa3a414060030a189fa33e5e8368bc7487b3cdb89ddaf85",
+			"commission": "5",
+			"created_at_block": "1250337",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx2a8c2563c9a31acb7478fba2d3d75a2fd4ab42cd",
+			"owner_address": "Mx2a8c2563c9a31acb7478fba2d3d75a2fd4ab42cd",
+			"total_stake": "0",
+			"pub_key": "Mp014637cba6a4d75796ff377433b770a5f7af274f243d68e6a9d94bcf86bf8b0e",
+			"commission": "1",
+			"created_at_block": "1347311",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx00994159e2a6819bf94f1dde717468750d54443c",
+			"owner_address": "Mx00994159e2a6819bf94f1dde717468750d54443c",
+			"total_stake": "15723642085379364144",
+			"pub_key": "Mpaaaaa16ebd6af229b4cfc02c3ab40bd25c1051c3aa2120f07d08c1bd01555555",
+			"commission": "1",
+			"created_at_block": "1347327",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx00994159e2a6819bf94f1dde717468750d54443c",
+			"owner_address": "Mx00994159e2a6819bf94f1dde717468750d54443c",
+			"total_stake": "864902983671662360",
+			"pub_key": "Mpaaaaa16ebd6af229b4cfc02c3ab40bd25c1051c3aa2120f07d08c1bd02555555",
+			"commission": "1",
+			"created_at_block": "1347442",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxdd5fff6993aa73748748f87cf7ffa0a4f941cb92",
+			"owner_address": "Mx17f4dcb06f3201e99d4e3b7bac7b8374952e16cf",
+			"total_stake": "2970000000000000000",
+			"pub_key": "Mpeeeeeed383e8026f8f5e13b35d8e0e56ae249a14a996095c8db787ec649a4221",
+			"commission": "5",
+			"created_at_block": "1369516",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx99050dcd446f84657fb87b019b47e1cfc83e9b8d",
+			"owner_address": "Mx99050dcd446f84657fb87b019b47e1cfc83e9b8d",
+			"total_stake": "687112856309511696400",
+			"pub_key": "Mpdd896752c9017f5c9637d420fe08936e7fc48a863ebd252e9967628aeb3ab0aa",
+			"commission": "3",
+			"created_at_block": "1549901",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxbdb839463d9e29d0a2987178c48c352d20017013",
+			"owner_address": "Mx10744b8c39b51b5593dad4c7bfd41cf49bce4000",
+			"total_stake": "147705701118559813595",
+			"pub_key": "Mp9eac0f067c87baf3e54077b2b45f84cc6853cf814744a2bf4796138324d3565c",
+			"commission": "9",
+			"created_at_block": "1552174",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx3da4fbf5d1564bb2b28b57e776790f1152ea88f5",
+			"owner_address": "Mx3da4fbf5d1564bb2b28b57e776790f1152ea88f5",
+			"total_stake": "0",
+			"pub_key": "Mp24d1d0878074e5d0f7b043197750262ff7762976fafea1937058fea3aac6f00b",
+			"commission": "5",
+			"created_at_block": "1576187",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx9225c63705dbcec8da6d633a8bea14609bf4b644",
+			"owner_address": "Mx206501d16f870798e6c2cb8eccb1664c9bc3bb88",
+			"total_stake": "24181033781498496415249117",
+			"pub_key": "Mp02ff680cbea3fb95f547bddde69c9150b3b7ab8d1c5c2a1bf94ccb70bf073b2c",
+			"commission": "7",
+			"created_at_block": "1604224",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx6d4c37965a59f306bb2deeaf1978d33f783e35e8",
+			"owner_address": "Mx6d4c37965a59f306bb2deeaf1978d33f783e35e8",
+			"total_stake": "14273903361075873115080",
+			"pub_key": "Mp166a81f3eed8fff966f83e56bdd89f1a0c641c3678a10a0767a82861dec358df",
+			"commission": "5",
+			"created_at_block": "1699798",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx6b6a11d25310b2a928eef5777777751e60c4d313",
+			"owner_address": "Mx11e73806a0ca5c126f9db1b043006fadb393208d",
+			"total_stake": "8153451571491246720041299",
+			"pub_key": "Mp7779ec1c6492e7c71a36f4009d7ee5a43fed2fe4048882b8a099e748869f0777",
+			"commission": "7",
+			"created_at_block": "1705125",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx8125dd4adc76790f1692d916e040f378891562e3",
+			"owner_address": "Mx8125dd4adc76790f1692d916e040f378891562e3",
+			"total_stake": "0",
+			"pub_key": "Mpc4a6515101b6d8126cf87def7aa25361bd5593a5bd5a8ece59a597e49689ffd0",
+			"commission": "1",
+			"created_at_block": "1782795",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxd184fee58c1a8862345c702439dbd83065697da8",
+			"owner_address": "Mxd184fee58c1a8862345c702439dbd83065697da8",
+			"total_stake": "49686806956560626649",
+			"pub_key": "Mpe18d5b47845cca069f57cb45553dd2d747a664ed1fef57ef0c1801dabfec1d73",
+			"commission": "3",
+			"created_at_block": "1862374",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxe5c2d7b0aef16ba11cc58452722819dd32036fbb",
+			"owner_address": "Mx6147f7304ca71de235cf5cbd10225683f2087a9e",
+			"total_stake": "5746803144811493890961404",
+			"pub_key": "Mp2cbade2b08501047bb9d2a08abeee21e276cb0e027e84e3a526ede85c4cbd442",
+			"commission": "4",
+			"created_at_block": "2025503",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx03aeb974fb622a53f2fab5ba051272c1d284e9b8",
+			"owner_address": "Mx03aeb974fb622a53f2fab5ba051272c1d284e9b8",
+			"total_stake": "51080819465436888158758281",
+			"pub_key": "Mp120c15e48aed0ac866a1a918bd367cfa31909a6b09f328a18bd18f32edef2be8",
+			"commission": "5",
+			"created_at_block": "2057775",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx555745b8a997edc33c76db0ab138e89582b86a2a",
+			"owner_address": "Mx555745b8a997edc33c76db0ab138e89582b86a2a",
+			"total_stake": "225857640073683862322",
+			"pub_key": "Mp68f031d0c47e095c78801bbd606b94d7949b41fee0fbd61905f8689649d1aaa1",
+			"commission": "10",
+			"created_at_block": "2064574",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxf95ee5233ece92527b83e59f0687fb2f536581bd",
+			"owner_address": "Mxf95ee5233ece92527b83e59f0687fb2f536581bd",
+			"total_stake": "250880773280154750531",
+			"pub_key": "Mp12e7ddcf3fe0761158d84cc87d0ef813bce91cf46c6d1d6bd6a68bd48e8c561b",
+			"commission": "1",
+			"created_at_block": "2072992",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx73b7fb5d4e39cabb91c1099e5b858b55fc427373",
+			"owner_address": "Mx8722c6a18914666bc8b997f8d05bcf2000bee878",
+			"total_stake": "7531871634994404984463462",
+			"pub_key": "Mp7373d6d5a4ec18d87d766e5b4c6d3a0c94b357c4460a9ed377bf5d09fcd77373",
+			"commission": "3",
+			"created_at_block": "2097218",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx5ba0e3efa1ac05a9bbbbb59000b800169040b2c7",
+			"owner_address": "Mxc75ebe6091a7012bb7e421857f12099b80f112fd",
+			"total_stake": "8031500912289079348928636",
+			"pub_key": "Mp88883bcd4e9a4eeb7f5a7b7d1f4c02ac0fadc268824694fcccc84e39f4e08888",
+			"commission": "4",
+			"created_at_block": "2110038",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxec234e28b232cd293a75db481d48e5d32ad01e50",
+			"owner_address": "Mxec234e28b232cd293a75db481d48e5d32ad01e50",
+			"total_stake": "489229130040350341175",
+			"pub_key": "Mpefeb140f138005aa3c03f4eb69648d53735a4eb9cdcf2479b9e6738989dee44a",
+			"commission": "1",
+			"created_at_block": "2163345",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx0763bc67de3093fbe34f7543587db3f90185af7d",
+			"owner_address": "Mx0763bc67de3093fbe34f7543587db3f90185af7d",
+			"total_stake": "0",
+			"pub_key": "Mpa6411df314f7c1256ec209a165406afec356cecec05b450344f375bb7323094b",
+			"commission": "5",
+			"created_at_block": "2229896",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx0c0b181a7a9b1182afe10d815554f95cef74cc92",
+			"owner_address": "Mx344b1099908f864232cddf385c627d6c3777ff3a",
+			"total_stake": "4177022338314656884",
+			"pub_key": "Mpcc40aa6888b091a309220d1d04780f4af6701a2968095d99e3422d301f75a62e",
+			"commission": "2",
+			"created_at_block": "2246697",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx77734ca337edae5b030b859908ab6927af54fcec",
+			"owner_address": "Mxb097bfe12c29e1391ff7bc903034da99d4258d1c",
+			"total_stake": "7363667266399600670905780",
+			"pub_key": "Mp5606ddda3d999cdc9d3b1da0a68d871d1b15aea8ec9a074af4c13e9b1889a083",
+			"commission": "20",
+			"created_at_block": "2338331",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx913bf913f08ebbe2fa98cea6ad4caee9dffed860",
+			"owner_address": "Mx913bf913f08ebbe2fa98cea6ad4caee9dffed860",
+			"total_stake": "200703753787405685481778",
+			"pub_key": "Mp6b04b1d07e955727b284df3fc9309f59e2a27be54f047d666e414c00b65dc99d",
+			"commission": "2",
+			"created_at_block": "2531685",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx801ca0199c0eaf99498d394e58cbe954aaac911c",
+			"owner_address": "Mxc942e38ecabf707500f836f886223d27231ad530",
+			"total_stake": "1680754395190693412705620",
+			"pub_key": "Mpbf129ef2bb58a383b637e14607f164f9fff6441094ade5830ef90d216db86244",
+			"commission": "2",
+			"created_at_block": "2585359",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx777537af80e078089aca83fb180f6fc21b227777",
+			"owner_address": "Mx777515e398d25021445d20f0647b4f2de3b27777",
+			"total_stake": "1095960547967631360",
+			"pub_key": "Mp5f495fb7bae4d67230126fcfd9a5c607d99c82276a3365d5a43285235e777777",
+			"commission": "7",
+			"created_at_block": "2593541",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx57984f787e478b30cd34e5679448b80382f89603",
+			"owner_address": "Mx0b6c6daa02e38a5c76170c94f4fe2a9eb0aa3cba",
+			"total_stake": "5294700343480858610605296",
+			"pub_key": "Mp7b4174732a169c467c9ee791576fc5860ca99bc7a49d8cfb041a91f9202178cc",
+			"commission": "8",
+			"created_at_block": "2603921",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxd1743ad96b1266820ca00c9e43ba10cfec85d20d",
+			"owner_address": "Mx669e499ffb6c2792702afb5ef4027665cefdfd50",
+			"total_stake": "3970562994953432172069478",
+			"pub_key": "Mp92d05e745464f4d17a12440f48d73dddf8135e45cf91a7e3c4bcacdb2cc1c99f",
+			"commission": "5",
+			"created_at_block": "2661943",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx662b97049010e91b0c7bc86e326ff622a57679c8",
+			"owner_address": "Mx662b97049010e91b0c7bc86e326ff622a57679c8",
+			"total_stake": "50000000000000000000",
+			"pub_key": "Mp65fe115ba5a35bebff2d83e84c79d48fe26071be7d3d2cab2e958a03e23325ee",
+			"commission": "7",
+			"created_at_block": "2741078",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx77794505936fbf0eb0ed9adb59361fb3f2d45e23",
+			"owner_address": "Mx9aa2078e9e737ea1ae3c9cd77edb07131f1fed21",
+			"total_stake": "11895013597918147508741",
+			"pub_key": "Mp843f4c30710629c4d7c6f5a0ddc15bc96f26e89b65226351c31546c3271e4060",
+			"commission": "8",
+			"created_at_block": "2778555",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx06da145e5dc62ab92ecc768b8821d5aa41e98d0d",
+			"owner_address": "Mx51b0eb40a99aba23e03b1ab947471ec26f2d010d",
+			"total_stake": "9143722752289830224360972",
+			"pub_key": "Mp1c3cc265a7c1d80f0f83d97eb6d7c261b71b0732d731f8c92678f381260e434d",
+			"commission": "7",
+			"created_at_block": "2916803",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx248bfbd3a2639929eab97903de5e1b6cc4840350",
+			"owner_address": "Mxd6f33e590823768d2b9bb0e3ff9b898e7cc7c33c",
+			"total_stake": "14262615384224027066275148",
+			"pub_key": "Mp4926c68cec9b85d743810c801c35c33bd3d1e74ae0a801e4e08998e656835727",
+			"commission": "7",
+			"created_at_block": "3066891",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxd09de6329339b158eaf501a1e5978abdeee1111a",
+			"owner_address": "Mxd09de6329339b158eaf501a1e5978abdeee1111a",
+			"total_stake": "1000000000000000000",
+			"pub_key": "Mpf45f995a0afb0a17bfa5af7191b59ca675890b25db51e3edf0787dcbc1fa1e77",
+			"commission": "3",
+			"created_at_block": "3087607",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx29fbe852ce53144239f9590e0ad8577a962a6777",
+			"owner_address": "Mx29fbe852ce53144239f9590e0ad8577a962a6777",
+			"total_stake": "990000000000000000",
+			"pub_key": "Mpeee9614b63a7ed6370ccd1fa227222fa30d6106770145c55bd4b482b88888887",
+			"commission": "100",
+			"created_at_block": "3106084",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxa7c51adc092d939e114ef538c6693972880dfc6b",
+			"owner_address": "Mxa7c51adc092d939e114ef538c6693972880dfc6b",
+			"total_stake": "21573835551656584201351977",
+			"pub_key": "Mpc6df0dd44cae3cb49ee0ef8bd78750b961e64e231e6dfdc22fbd8e0c476d66d2",
+			"commission": "10",
+			"created_at_block": "3232737",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx69744e0288d382a32341d150e3e23ccddf98cab7",
+			"owner_address": "Mxc2087a3f98558e5cf117c3c0ef79bd56b62875ce",
+			"total_stake": "4028477855736467253071558",
+			"pub_key": "Mp00454817134295dc6d39517672b2467ee8301a836216ace04bf0cf3910000000",
+			"commission": "20",
+			"created_at_block": "3403999",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxd44177484c59de1fdd8845a48f0ebca88fb93c78",
+			"owner_address": "Mxd44177484c59de1fdd8845a48f0ebca88fb93c78",
+			"total_stake": "0",
+			"pub_key": "Mpddb5a8a77bc14325e3587b2c7e2e2ffe23a431981624fe2480f0cf3846b584c9",
+			"commission": "1",
+			"created_at_block": "3518217",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx9fe6fdd6e7701fc7bf933997baa67a15b62cf365",
+			"owner_address": "Mx9fe6fdd6e7701fc7bf933997baa67a15b62cf365",
+			"total_stake": "91000000000000000000",
+			"pub_key": "Mpd0ba77aba00ffa149679edb9341cfc40e76d54213a92242383f548aaefb6ada1",
+			"commission": "10",
+			"created_at_block": "3523124",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx499fe1495488dfa83e2deee6a570777159dffe63",
+			"owner_address": "Mx626155bf952fc6d15999220071cecad64462dfa5",
+			"total_stake": "3445775716535599326052374",
+			"pub_key": "Mpb9f5eb577c73f92b27175aa91608ea3e6bb8fc2dbd1eeeaa9d397f27d76a4e45",
+			"commission": "11",
+			"created_at_block": "3558386",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxaaaf49d670ed9addbc564201d529d2f7cb7aaaaa",
+			"owner_address": "Mx7b2673d0722606abf67bd434c4c9b88fe51b380f",
+			"total_stake": "1869678752918741740102588",
+			"pub_key": "Mpaaaa175f44e40e31d0f16fc05fc65e5802dcdf40fe897dd762076d633bc1aaaa",
+			"commission": "6",
+			"created_at_block": "3619873",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx0cb1cc4f8a52b09f92f73b63f880f483542c20f1",
+			"owner_address": "Mx57efe0761b9a557970a11923cca9a3a2145ec722",
+			"total_stake": "0",
+			"pub_key": "Mp77d9c18093527957b1a52eafd191c152fb1db493a1f02718686dd6e679df2dec",
+			"commission": "5",
+			"created_at_block": "3752737",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxf42d941c2e132055f05d5567a5dd7af4471a930d",
+			"owner_address": "Mxf42d941c2e132055f05d5567a5dd7af4471a930d",
+			"total_stake": "481946563456195773031182",
+			"pub_key": "Mpa70d12c096cb459e7c191be0dffb1a7dbe4a9587bfa7174c654959e5e9da7203",
+			"commission": "10",
+			"created_at_block": "3808814",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx8d32459fa9b35912435ffe6c732ce51fa189c92f",
+			"owner_address": "Mx8d32459fa9b35912435ffe6c732ce51fa189c92f",
+			"total_stake": "9900000000000000000",
+			"pub_key": "Mpd3de980f741caa889d770a76eff4762e3d3ae9d9bc33d6c71d3d99d3be864621",
+			"commission": "10",
+			"created_at_block": "3822555",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx48a6667e104756e98b8ba7c6c3370a03f46005b2",
+			"owner_address": "Mxba6f591d61cb7ce57ddd7f0d21eb1501a903b60b",
+			"total_stake": "340943665769716320771719",
+			"pub_key": "Mp7ae947318f6fcf193cf9191b3ed4f30e972f15498fcf437ebc0b86205d3d69c5",
+			"commission": "7",
+			"created_at_block": "3848720",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxc8df4596f12a8682c510098c7f62d58ff5407570",
+			"owner_address": "Mxc8df4596f12a8682c510098c7f62d58ff5407570",
+			"total_stake": "151751166149219669836",
+			"pub_key": "Mpb6e5d25c7ef424a6bb6373242c2499ce239feb8fe2efdc947494c595ef7a88c2",
+			"commission": "5",
+			"created_at_block": "3953188",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx8af3e67a6df6d6e566a430c84d06d966327dfa53",
+			"owner_address": "Mx8af3e67a6df6d6e566a430c84d06d966327dfa53",
+			"total_stake": "26981297092725677970173",
+			"pub_key": "Mp389b79b3a849cbae8e87765d15dd04434ecf790e974f61f25e35ed9d79926b97",
+			"commission": "2",
+			"created_at_block": "3969595",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxed99b747c7ec975915b3a3e750462c466376c213",
+			"owner_address": "Mxed99b747c7ec975915b3a3e750462c466376c213",
+			"total_stake": "0",
+			"pub_key": "Mp93bc15e4a3674a90b9ac344f954a72d58d6fc2aa09e4bce5753a2ef2d2f8383d",
+			"commission": "1",
+			"created_at_block": "4044855",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx3dd66703059f406887d7f5efc419edf56dedee8d",
+			"owner_address": "Mx3dd66703059f406887d7f5efc419edf56dedee8d",
+			"total_stake": "2434706003916319624325995",
+			"pub_key": "Mp2c827f0365d6592b5377b771d36cb6b1006ca13243122476800febab59b4a2e9",
+			"commission": "10",
+			"created_at_block": "4086585",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxcf104a67705149ee14669a2ff37dc4755b50765d",
+			"owner_address": "Mx46549e7dee980799c0d874a08fc5259d9d8c16de",
+			"total_stake": "12586703421855119270146",
+			"pub_key": "Mp60981b11da04310660e2bed1d6191a0c595c8daf5395df5a6204f2e966999999",
+			"commission": "100",
+			"created_at_block": "4138908",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx9f7bc9b344641aedbcc44306c468d221f742b691",
+			"owner_address": "Mx9f7bc9b344641aedbcc44306c468d221f742b691",
+			"total_stake": "0",
+			"pub_key": "Mp7cb8fd083550f1a356ed4450d78ab4284521de6bc41931c195cbb0cfaa9c53ca",
+			"commission": "5",
+			"created_at_block": "4170422",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxbf0365b82d851961da1b0d64639f95edef3c770d",
+			"owner_address": "Mxbf0365b82d851961da1b0d64639f95edef3c770d",
+			"total_stake": "6000000000000000000",
+			"pub_key": "Mp6460cd9a218030816db39e2c10aa997eb5d2e2ddadcc3ea952715e58f2b1a43b",
+			"commission": "100",
+			"created_at_block": "4185261",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx9f7bc9b344641aedbcc44306c468d221f742b691",
+			"owner_address": "Mx9f7bc9b344641aedbcc44306c468d221f742b691",
+			"total_stake": "85420000000000000000",
+			"pub_key": "Mp8cd72ef035edc34631386cf4079901de544466788eff93d5a8021e7f4de070e4",
+			"commission": "5",
+			"created_at_block": "4192800",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx35c6ace20ae2b8a1b625986f85f1268054ce5326",
+			"owner_address": "Mx35c6ace20ae2b8a1b625986f85f1268054ce5326",
+			"total_stake": "9900000000000000000",
+			"pub_key": "Mpe7e2de81092909d00d3057a243cbec17062102a5ef6f4adfbd15f5fe931c3fef",
+			"commission": "100",
+			"created_at_block": "4204658",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx69935e6d1b55da7a85c4ac48e11a758bcf377515",
+			"owner_address": "Mx5d31f0d67a3e09b18c02b434adfbd8ab0398bf7c",
+			"total_stake": "2023855751820508964005375",
+			"pub_key": "Mp4c45b862300e0d6a05febb742caa0448aef0e80c53d341bb10236b039ac54c1a",
+			"commission": "10",
+			"created_at_block": "4216416",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxbcb0c528550d741d1023bec0c016bccb6187df4c",
+			"owner_address": "Mx2232bc91769153b4865a878607f9789ec1de7e52",
+			"total_stake": "990000000000000000",
+			"pub_key": "Mpc54acc1da1ca435da4c785030c40acb8c87dd9f54346e9da5a8aae12fbde4d81",
+			"commission": "5",
+			"created_at_block": "4241574",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx658889d0efec043bf94b95187bda2c555be9fc20",
+			"owner_address": "Mx82cbe1523c459bf6dbb07a0153cd69136af9b99c",
+			"total_stake": "90425142062158818732623",
+			"pub_key": "Mp12344bc0137e395b84b754ac3646fd74f949743157c479cc42a30ee16d964321",
+			"commission": "10",
+			"created_at_block": "4254059",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxbcb0c528550d741d1023bec0c016bccb6187df4c",
+			"owner_address": "Mx2232bc91769153b4865a878607f9789ec1de7e52",
+			"total_stake": "6330000000000000000",
+			"pub_key": "Mp779e8dd7e68f05609c8b0695888595110331896477510a4c325af1641146bc00",
+			"commission": "5",
+			"created_at_block": "4353651",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxaf3ced3a658e219685cc7ebbc5ea0ccb998c34ab",
+			"owner_address": "Mx20ddf597aa08a3edd76333d787fd48730c616be0",
+			"total_stake": "96521255773285824896414",
+			"pub_key": "Mp18148b509dd4263eb5dbb272c4fdb22d2d4237c58e6a616e66f77cf999999999",
+			"commission": "10",
+			"created_at_block": "4374085",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxbcb0c528550d741d1023bec0c016bccb6187df4c",
+			"owner_address": "Mx5d41c8e1ebd7b59b6ed9a985fcbfe17a081e942b",
+			"total_stake": "5000000000000000000",
+			"pub_key": "Mp168cd267404fe15d806dc27d0e67ad280b2c81906e239d58a48afa098a59cdff",
+			"commission": "5",
+			"created_at_block": "4408071",
+			"status": 1
+		},
+		{
+			"reward_address": "Mx4c46b6fed459f4ebd210b19263e873e11ab636f1",
+			"owner_address": "Mxb0c28148eb5bb50792c5875c68fa70e0b1743dd5",
+			"total_stake": "3374803121967823916966982",
+			"pub_key": "Mp04eefbbdeba47c8c7d41ef86668639c09d5013148a0ba726c4600c9943936b2c",
+			"commission": "10",
+			"created_at_block": "4420946",
+			"status": 2
+		},
+		{
+			"reward_address": "Mxbcb0c528550d741d1023bec0c016bccb6187df4c",
+			"owner_address": "Mxa8505341fdf2fab9c7d3fae4e6cf7c930b7d7c02",
+			"total_stake": "5000000000000000000",
+			"pub_key": "Mp09924e8e088428bc6224e5d2de261698ed2b81c8de8f1243dcfcfb4d7c025da0",
+			"commission": "5",
+			"created_at_block": "4434780",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxbcb0c528550d741d1023bec0c016bccb6187df4c",
+			"owner_address": "Mx195388357fceaae6d504abbe885c206093463005",
+			"total_stake": "1000000000000000000",
+			"pub_key": "Mp89c617e56f97ffd798aa33a1addb50c43a000e579756219ad48c7bbd89d5eec8",
+			"commission": "5",
+			"created_at_block": "4436760",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxf7cc7ccb33b7b84bf1df3885a20e5c147442e48c",
+			"owner_address": "Mx2df10eedc7aa7a26aac2a871f8c0d17392bac800",
+			"total_stake": "0",
+			"pub_key": "Mp5b017a6ba108dd8babc22e677cade17a62c3890f118c7375b8e5a6fe063ec04a",
+			"commission": "10",
+			"created_at_block": "4509471",
+			"status": 2
+		},
+		{
+			"reward_address": "Mx0155437b8aaf84b943589130d5ab27b112e69784",
+			"owner_address": "Mx0155437b8aaf84b943589130d5ab27b112e69784",
+			"total_stake": "10000000000000000000",
+			"pub_key": "Mped3eb71dcd50122dc8f50f6cc7464f22128eb58fa0af6864ffbcb733febf6113",
+			"commission": "5",
+			"created_at_block": "4521657",
+			"status": 1
+		},
+		{
+			"reward_address": "Mxf7cc7ccb33b7b84bf1df3885a20e5c147442e48c",
+			"owner_address": "Mx2df10eedc7aa7a26aac2a871f8c0d17392bac800",
+			"total_stake": "5000000000000000000",
+			"pub_key": "Mp052f704bdfce99a28af7bce2c40cbb0662fd757a709eee40c83c43b0afaec02a",
+			"commission": "10",
+			"created_at_block": "4526975",
+			"status": 2
+		}
+	]
+}

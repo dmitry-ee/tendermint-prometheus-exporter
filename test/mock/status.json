@@ -1,0 +1,46 @@
+{
+	"jsonrpc": "2.0",
+	"id": "",
+	"result": {
+		"version": "1.0.5",
+		"latest_block_hash": "81E22195EDECFC389095AF391A81ED72B9E0B81F03EC2CEB41353D4013A9DFC8",
+		"latest_app_hash": "79FCDBC75001C28AE21EB8F01A69D9AB3AF91130ECF458CD5C2E928C8306E047",
+		"latest_block_height": "4552900",
+		"latest_block_time": "2020-02-08T10:27:10.338473042Z",
+		"state_history": "off",
+		"tm_status": {
+			"node_info": {
+				"protocol_version": {
+					"p2p": "7",
+					"block": "10",
+					"app": "5"
+				},
+				"id": "083f78d8c024b2d386f2b760a604043fd675f07b",
+				"listen_addr": "51.83.230.173:26656",
+				"network": "minter-mainnet-1",
+				"version": "0.32.1",
+				"channels": "4020212223303800",
+				"moniker": "poopa.seeds-mainnet.minter.one",
+				"other": {
+					"tx_index": "on",
+					"rpc_address": "tcp://127.0.0.1:26657"
+				}
+			},
+			"sync_info": {
+				"latest_block_hash": "81E22195EDECFC389095AF391A81ED72B9E0B81F03EC2CEB41353D4013A9DFC8",
+				"latest_app_hash": "79FCDBC75001C28AE21EB8F01A69D9AB3AF91130ECF458CD5C2E928C8306E047",
+				"latest_block_height": "4552900",
+				"latest_block_time": "2020-02-08T10:27:10.338473042Z",
+				"catching_up": false
+			},
+			"validator_info": {
+				"address": "768FC560387A78917AB3C03634EFBED599D1BC7B",
+				"pub_key": {
+					"type": "tendermint/PubKeyEd25519",
+					"value": "oSwiTKmqjr0IRhcJFJMmlB+GnFToZtfRdC+7FBERERE="
+				},
+				"voting_power": "0"
+			}
+		}
+	}
+}
