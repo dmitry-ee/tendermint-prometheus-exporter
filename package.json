@@ -20,13 +20,13 @@
     "mocha": "*"
   },
   "scripts": {
-    "debug": "node metric_debug.js",
-    "start": "node index.js serve --target=https://api.minter.one --status --target http://api-01.minter.store:8841 --no-status",
-    "parse": "node parse.js server --target=https://api.minter.one --status --target http://api-01.minter.store:8841 --no-status",
+    "start": "node index serve --target=https://api.minter.one --status --target http://api-01.minter.store:8841 --no-status",
+    "args": "node index args   --target=https://api.minter.one --status --target http://api-01.minter.store:8841 --no-status",
     "test": "nyc --reporter=text --reporter lcov npm run test:mocha",
     "test:mocha": "mocha test/*.test.js test/**/*.test.js --exit",
     "test:mocha:metric": "mocha test/metric.test.js --exit",
-    "test:mocha:tm": "mocha test/tendermint-*.test.js --exit"
+    "test:mocha:tm": "mocha test/tendermint-*.test.js --exit",
+    "test:mocha:argv": "mocha test/args.test.js --exit"
   },
   "repository": {
     "type": "git",
