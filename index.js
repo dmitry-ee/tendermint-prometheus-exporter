@@ -18,10 +18,9 @@ const { logger, MetricServer, parseNrun } = require('./lib')
 // return
 
 parseNrun('', (argvParseErr, argv, parser) => {
-	parser.getCompletion(process.argv.slice(2), res => {
-		console.log(res)
-	})
-	logger.error(argvParseErr)
+	if (argvParseErr && argvParseErr[0]) {
+		parser.check((process.argv) => {})
+	}
 	logger.warn(argv)
 	if (argv._[0] == 'serve') {
 		logger.warn(`starting with options ${JSON.stringify(argv)}`)
