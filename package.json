@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node index serve --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --no-status",
-    "args": "node index args   --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --no-status",
+    "args": "node index args   --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --no-status --no-candidates",
     "test": "nyc --reporter=text --reporter lcov npm run test:mocha",
     "test:mocha": "mocha test/*.test.js test/**/*.test.js --exit",
     "test:mocha:metric": "mocha test/metric.test.js --exit",
