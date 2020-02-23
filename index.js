@@ -11,7 +11,7 @@ parseNrun('', (argvParseErr, argv, parser) => {
 	}
 	if (argv._[0] == 'serve') {
 		logger.warn(`starting with options ${JSON.stringify(argv)}`)
-		let server = new MetricServer({ port: argv.port, timeout: argv.timeout, targets: argv.target })
+		let server = new MetricServer({ port: argv.port | 9675, timeout: argv.timeout | 100, targets: argv.targets })
 		server.run()
 	} else if (argv._[0] == 'args') {
 		logger.warn(argv)
