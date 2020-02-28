@@ -32,7 +32,7 @@ describe('MetricServer', () => {
 			chai.request(metricsBaseUrl).get(metricsSubUrl).end(() => {
 				chai.request(metricsBaseUrl).get(metricsSubUrl).end((err, resp) => {
 					// logger.error(err)
-					// logger.error(resp.text)
+					logger.error(resp.text)
 					done()
 				})
 			})
