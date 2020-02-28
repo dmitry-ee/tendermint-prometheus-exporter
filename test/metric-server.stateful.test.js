@@ -20,21 +20,30 @@ let metricsBaseUrl = `http://localhost:${listeningPort}`
 let metricsSubUrl = '/metrics'
 let ms = new MetricServer({ targets: defaultTargets, port: listeningPort })
 
+const countOfMatches = (arrOfStrings, regex) => {
+	var i = 0
+	arrOfStrings.forEach( str => str.match(new RegExp(regex)) ? i++ : 0 )
+	return i
+}
+
 describe('MetricServer', () => {
 
 	before(done => {
-		ms.run(() => setTimeout(done, 1000))
+		ms.run(() => setTimeout(done, 10))
 	})
 
 	describe('get /metrics', () => {
 
 		it('should properly return both status, net_info, candidates', (done) => {
-			chai.request(metricsBaseUrl).get(metricsSubUrl).end(() => {
-				chai.request(metricsBaseUrl).get(metricsSubUrl).end((err, resp) => {
-					// logger.error(err)
-					logger.error(resp.text)
-					done()
-				})
+			chai.request(metricsBaseUrl).get(metricsSubUrl).end((err, resp) => {
+				// logger.error(err)
+				respLines = resp.text.split(/\r?\n/)
+				assert.isAbove(countOfMatches(respLines, /minter_/), 0)
+				assert.isAbove(countOfMatches(respLines, /_net_info_/), 0)
+				assert.isAbove(countOfMatches(respLines, /_candidates_/), 0)
+				assert.equal(countOfMatches(respLines, /moniker=""/), 0)
+				defaultTargets.forEach(target => assert.isAbove(countOfMatches(respLines, `${target.url}`), 0))
+				done()
 			})
 		}).timeout(10000)
 	})

@@ -13,7 +13,7 @@ beforeEach(() => {
 
 let defaultTargets = [
 	{	url: 'https://api.minter.one', 					status: true, netInfo: true, 'net-info': true, candidates: true },
-	{ url: 'http://api-01.minter.store:8841',	status: true,	netInfo: true, 'net-info': true, candidates: true },
+	// { url: 'http://api-01.minter.store:8841',	status: true,	netInfo: true, 'net-info': true, candidates: true },
 ]
 let listeningPort = 9100
 let metricsBaseUrl = `http://localhost:${listeningPort}`
