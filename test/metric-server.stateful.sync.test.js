@@ -18,7 +18,6 @@ let defaultTargets = [
 let listeningPort = 9100
 let metricsBaseUrl = `http://localhost:${listeningPort}`
 let metricsSubUrl = '/metrics'
-let ms = new MetricServer({ targets: defaultTargets, port: listeningPort })
 
 const countOfMatches = (arrOfStrings, regex) => {
 	var i = 0
@@ -26,7 +25,9 @@ const countOfMatches = (arrOfStrings, regex) => {
 	return i
 }
 
-describe('MetricServer', () => {
+describe('MetricServer:sync', () => {
+
+	let ms = new MetricServer({ targets: defaultTargets, port: listeningPort, scrapeAsync: true })
 
 	before(done => {
 		ms.run(() => setTimeout(done, 10))
@@ -43,6 +44,9 @@ describe('MetricServer', () => {
 				assert.isAbove(countOfMatches(respLines, /_candidates_/), 0)
 				assert.equal(countOfMatches(respLines, /moniker=""/), 0)
 				defaultTargets.forEach(target => assert.isAbove(countOfMatches(respLines, `${target.url}`), 0))
+				defaultTargets.forEach(target => assert.equal(countOfMatches(respLines, `${target.url}/status`), 0))
+				defaultTargets.forEach(target => assert.equal(countOfMatches(respLines, `${target.url}/net_info`), 0))
+				defaultTargets.forEach(target => assert.equal(countOfMatches(respLines, `${target.url}/candidates`), 0))
 				done()
 			})
 		}).timeout(10000)

@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "jmespath": "^0.15.0",
     "lodash": "^4.17.15",
+    "parallel-http-request": "^1.1.3",
     "prom-client": "^11.5.3",
     "prometheus-api-metrics": "^2.2.3",
     "request": "^2.88.0",
@@ -30,8 +31,8 @@
     "test:mocha:tm": "mocha test/tendermint-*.test.js --exit",
     "test:mocha:argv": "mocha test/args.test.js --exit",
     "test:mocha:ms:sl": "mocha test/metric-server.stateless.test.js --exit",
-    "test:mocha:ms:sf": "mocha test/metric-server.stateful.test.js --exit",
-    "test:mocha:ms": "mocha test/metric-server.stateful.test.js test/metric-server.stateless.test.js --exit"
+    "test:mocha:ms:sf": "mocha test/metric-server.stateful.sync.test.js test/metric-server.stateful.async.test.js --exit",
+    "test:mocha:ms": "mocha test/metric-server.stateful.sync.test.js test/metric-server.stateful.async.test.js test/metric-server.stateless.test.js --exit"
   },
   "repository": {
     "type": "git",
