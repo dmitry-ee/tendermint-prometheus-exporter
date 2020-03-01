@@ -3,3 +3,12 @@ node_js:
   - 12.1
 before_install:
   - npm i nyc -g
+git:
+  depth: 10
+branches:
+  only:
+    - master
+notifications:
+  email:
+    on_success: never
+    on_failure: change

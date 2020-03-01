@@ -1,7 +1,7 @@
 {
-  "name": "minter-prometheus-exporter",
-  "version": "0.1.0",
-  "description": "Prometheus Exporter for Minter Project",
+  "name": "tendermint-prometheus-exporter",
+  "version": "0.9.9",
+  "description": "Prometheus Exporter for Tendermint Blockchain",
   "main": "index.js",
   "dependencies": {
     "async": "^3.1.1",
@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmitry-ee/minter-prometheus-exporter.git"
+    "url": "git+https://github.com/dmitry-ee/tendermint-prometheus-exporter.git"
   },
   "author": "Dmitry E",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/dmitry-ee/minter-prometheus-exporter/issues"
+    "url": "https://github.com/dmitry-ee/tendermint-prometheus-exporter/issues"
   },
-  "homepage": "https://github.com/dmitry-ee/minter-prometheus-exporter#readme"
+  "homepage": "https://github.com/dmitry-ee/tendermint-prometheus-exporter#readme"
 }
