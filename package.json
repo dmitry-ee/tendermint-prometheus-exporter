@@ -19,6 +19,7 @@
   "devDependencies": {
     "chai": "*",
     "chai-http": "^4.3.0",
+    "coveralls": "^3.0.9",
     "mocha": "*",
     "request-promise": "^4.2.5"
   },
@@ -26,6 +27,7 @@
     "start": "node index serve --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --net-info --status --candidates",
     "args": "node index args  --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --net-info --status --candidates",
     "test": "nyc --reporter=text --reporter lcov npm run test:mocha",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "test:mocha": "mocha test/*.test.js test/**/*.test.js --exit",
     "test:mocha:metric": "mocha test/metric.test.js --exit",
     "test:mocha:tm": "mocha test/tendermint-*.test.js --exit",
