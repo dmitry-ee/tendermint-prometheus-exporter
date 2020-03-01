@@ -22,12 +22,25 @@ let metricsSubUrl = '/metrics'
 describe('MetricServer', () => {
 	describe('#constructor', () => {
 
-		it('check for empty targets', () => {
-			expect(() => ms = new MetricServer()).throw()
+		beforeEach(done => {
+			register.clear()
+			done()
 		})
 
-		if('check what if targets misuse', () => {
+		it('check for empty targets', () => {
+			expect(() => new MetricServer()).throw()
+		})
+
+		it('check what if targets misuse', () => {
+			expect(() => new MetricServer({ targets: [{ abc: 'http://trololo' }] })).throw()
+			register.clear()
 			expect(() => new MetricServer({ targets: [{ url: 'http://trololo' }] })).not.throw()
+			register.clear()
+			expect(() => new MetricServer({ targets: [{ url: 'http://trololo', status: true }] })).not.throw()
+			register.clear()
+			expect(() => new MetricServer({ targets: [{ url: 'http://trololo', status: true, netInfo: true }] })).not.throw()
+			register.clear()
+			expect(() => new MetricServer({ targets: [{ url: 'http://trololo', status: true, netInfo: true, candidates: true }] })).not.throw()
 		})
 
 		it('listens desired port + properly stops', (done) => {

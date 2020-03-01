@@ -31,8 +31,8 @@
     "test:mocha:tm": "mocha test/tendermint-*.test.js --exit",
     "test:mocha:argv": "mocha test/args.test.js --exit",
     "test:mocha:ms:sl": "mocha test/metric-server.stateless.test.js --exit",
-    "test:mocha:ms:sf": "mocha test/metric-server.stateful.sync.test.js test/metric-server.stateful.async.test.js --exit",
-    "test:mocha:ms": "mocha test/metric-server.stateful.sync.test.js test/metric-server.stateful.async.test.js test/metric-server.stateless.test.js --exit"
+    "test:mocha:ms:sf": "mocha test/metric-server.stateful.test.js --exit",
+    "test:mocha:ms": "mocha test/metric-server.stateful.test.js test/metric-server.stateless.test.js --exit"
   },
   "repository": {
     "type": "git",
