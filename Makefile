@@ -24,10 +24,16 @@ docker-clean-test:
 docker-test: docker-build-test docker-clean-test
 
 run:
-	docker run -it $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --net-info --status --candidates
+	-docker rm -f $(APP_NAME)
+	docker run --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
+run-d:
+	-docker rm -f $(APP_NAME)
+	docker run -d --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
+# run-test-d: run-d
+# 	npm
 
 bash:
-	docker run -it $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) bash
+	docker run -it $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) sh
 
 publish: build push
 

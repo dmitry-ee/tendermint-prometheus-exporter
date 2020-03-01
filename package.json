@@ -32,6 +32,7 @@
     "test:mocha:argv": "mocha test/args.test.js --exit",
     "test:mocha:ms:sl": "mocha test/metric-server.stateless.test.js --exit",
     "test:mocha:ms:sf": "mocha test/metric-server.stateful.test.js --exit",
+    "test:mocha:ms:smoke": "mocha test/metric-server.smoketest.js --exit",
     "test:mocha:ms": "mocha test/metric-server.stateful.test.js test/metric-server.stateless.test.js --exit"
   },
   "repository": {
