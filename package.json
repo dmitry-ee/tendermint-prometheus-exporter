@@ -4,7 +4,6 @@
   "description": "Prometheus Exporter for Tendermint Blockchain",
   "main": "index.js",
   "dependencies": {
-    "async": "^3.1.1",
     "connect-sequence": "^2.1.1",
     "express": "^4.17.1",
     "jmespath": "^0.15.0",
@@ -20,8 +19,7 @@
     "chai": "*",
     "chai-http": "^4.3.0",
     "coveralls": "^3.0.9",
-    "mocha": "*",
-    "request-promise": "^4.2.5"
+    "mocha": "*"
   },
   "scripts": {
     "start": "node index serve --target=https://api.minter.one --status -- --target http://api-01.minter.store:8841 --net-info --status --candidates",
