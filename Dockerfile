@@ -3,10 +3,11 @@ COPY  package.json /
 RUN   set ex && npm install --production
 
 FROM	mhart/alpine-node:slim-12.1
-LABEL maintainer="Dmitry E <https://github.com/dmitry-ee>"
 ARG		APP_DIR=/app
 ARG   EXPORTER_VERSION=0.0.0
 ENV   EXPORTER_VERSION=${EXPORTER_VERSION}
+LABEL	version=${EXPORTER_VERSION}
+MAINTAINER	Dmitry E "https://github.com/dmitry-ee"
 WORKDIR	$APP_DIR
 
 RUN 	apk add --no-cache tini

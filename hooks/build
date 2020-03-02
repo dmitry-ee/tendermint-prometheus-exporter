@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
+set -ex
 
 export DOCKER_TAG=$(grep 'version' package.json | sed 's/.*"version": "\(.*\)".*/\1/')
 
-docker build --build-arg EXPORTER_VERSION=$DOCKER_TAG -t $IMAGE_NAME .
+docker build --build-arg EXPORTER_VERSION=$DOCKER_TAG -t $DOCKER_REPO:$DOCKER_TAG .
