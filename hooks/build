@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+export DOCKER_TAG=$(jq -r .version 'package.json')
+
+docker build --squash --build-arg EXPORTER_VERSION=$DOCKER_TAG -t $IMAGE_NAME .
