@@ -2,6 +2,6 @@
 set -ex
 printenv
 
-export DOCKER_TAG=$(grep 'version' package.json | sed 's/.*"version": "\(.*\)".*/\1/')
+export APP_VERSION=$(grep 'version' package.json | sed 's/.*"version": "\(.*\)".*/\1/')
 
-docker build --build-arg EXPORTER_VERSION=$DOCKER_TAG -t $DOCKER_REPO:$DOCKER_TAG .
+docker build --build-arg EXPORTER_VERSION=$APP_VERSION -t $IMAGE_NAME .
