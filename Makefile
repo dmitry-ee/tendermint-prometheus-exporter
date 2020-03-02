@@ -6,7 +6,7 @@ DOCKER_ID_USER  = dmi7ry
 .ONESHELL:
 .PHONY: build all test docker-test
 
-all: docker-test build-nc run-test-d coveralls push
+all: docker-test build-nc run-test-d push
 
 test:
 	npm test

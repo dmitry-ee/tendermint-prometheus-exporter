@@ -5,4 +5,5 @@ COPY 	test ${APP_DIR}/
 WORKDIR	${APP_DIR}
 RUN		npm install -g nyc@15.0.0 && \
 			npm install && \
-			npm test
+			npm test && \
+			npm run coveralls
