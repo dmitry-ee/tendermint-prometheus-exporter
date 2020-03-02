@@ -4,6 +4,8 @@ services:
   tendermint-prometheus-exporter:
     container_name: tendermint-prometheus-exporter
     image: dmi7ry/tendermint-prometheus-exporter:latest
+    environment:
+      - LOG_LEVEL=info
     ports:
       - "9675:9675"
     command: >
