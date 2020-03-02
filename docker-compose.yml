@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  tendermint-prometheus-exporter:
+    container_name: tendermint-prometheus-exporter
+    image: dmi7ry/tendermint-prometheus-exporter:latest
+    ports:
+      - "9675:9675"
+    command: >
+      serve
+      --port 9675
+      --timeout 1000
+      --target https://api.minter.one --status --net-info --candidates --
+      --target http://api-01.minter.store:8841 --status --net-info --candidates
