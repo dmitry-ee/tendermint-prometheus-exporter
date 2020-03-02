@@ -8,8 +8,8 @@ const _ = require('lodash')
 chai.use(chaiHttp)
 
 let defaultTargets = [
-	{	url: 'https://api.minter.one', 					status: true, netInfo: true, 'net-info': true, candidates: true },
-	{ url: 'http://api-01.minter.store:8841',	status: true,	netInfo: true, 'net-info': true, candidates: true },
+	{	url: 'https://api.minter.one', 					status: true, 	netInfo: true, 'net-info': true, candidates: true },
+	{ url: 'http://api-01.minter.store:8841',	status: false,	netInfo: true, 'net-info': true, candidates: true },
 ]
 let listeningPort = 9100
 let metricsBaseUrl = `http://localhost:${listeningPort}`
@@ -32,6 +32,17 @@ describe('#MetricServer#sync', () => {
 	before(done => {
 		ms = new MetricServer({ targets: defaultTargets, port: listeningPort, scrapeAsync: false })
 		ms.run(() => setTimeout(done, 10))
+	})
+
+	describe('get /', () => {
+		it('should return 200', () => {
+			chai.request(metricsBaseUrl).get('/').end((err, resp) => {
+				assert.isNull(err)
+				assert.isDefined(resp)
+				assert.equal(resp.status, 200)
+				assert.equal(resp.text, '200 OK\n')
+			})
+		})
 	})
 
 	describe('get /metrics', () => {
@@ -63,6 +74,17 @@ describe('#MetricServer#async', () => {
 	before(done => {
 		ms = new MetricServer({ targets: defaultTargets, port: listeningPort, scrapeAsync: true })
 		ms.run(() => setTimeout(done, 10))
+	})
+
+	describe('get /', () => {
+		it('should return 200', () => {
+			chai.request(metricsBaseUrl).get('/').end((err, resp) => {
+				assert.isNull(err)
+				assert.isDefined(resp)
+				assert.equal(resp.status, 200)
+				assert.equal(resp.text, '200 OK\n')
+			})
+		})
 	})
 
 	describe('get /metrics', () => {

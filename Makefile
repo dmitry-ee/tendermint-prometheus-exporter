@@ -6,7 +6,7 @@ DOCKER_ID_USER  = dmi7ry
 .ONESHELL:
 .PHONY: build all test docker-test
 
-all: docker-test build-nc
+all: docker-test build-nc run-test-d coveralls push
 
 test:
 	npm test
@@ -29,13 +29,17 @@ run:
 run-d:
 	-docker rm -f $(APP_NAME)
 	docker run -d --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
-# run-test-d: run-d
-# 	npm
+run-test-d: run-d
+	npm run test:mocha:ms:smoke
+	-docker rm -f $(APP_NAME)
+
+coveralls:
+	npm run coveralls
 
 bash:
 	docker run -it $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) sh
 
-publish: build push
+publish: build-nc push
 
 push:
 	docker push $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION)
