@@ -12,10 +12,16 @@ test:
 	npm test
 
 build-c:
-	docker build --squash -t $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) --build-arg EXPORTER_VERSION=$(APP_VERSION) .
+	docker build --squash -t $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) \
+	--build-arg EXPORTER_VERSION=$(APP_VERSION) \
+	--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+	--build-arg VCS_REF=`git rev-parse --short HEAD` .
 
 build-nc:
-	docker build --squash --no-cache -t $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) --build-arg EXPORTER_VERSION=$(APP_VERSION) .
+	docker build --squash --no-cache -t $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) \
+	--build-arg EXPORTER_VERSION=$(APP_VERSION) \
+	--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+	--build-arg VCS_REF=`git rev-parse --short HEAD` .
 
 docker-build-test:
 	docker build --squash -t $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION)-test -f Dockerfile-test .
