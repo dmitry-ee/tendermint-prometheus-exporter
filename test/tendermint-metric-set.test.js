@@ -52,6 +52,7 @@ describe('TendermintMetricSet', () => {
 			expect(() => { mockData = JSON.parse(fs.readFileSync('test/mock/candidates.json'))} ).not.throw()
 			tm.set('candidates', {}, mockData)
 			tm.metrics.forEach(m => {
+				logger.info(`extracting ${m.name}`)
 				assert.isNotEmpty(_.keys(m.hashMap))
 				assert.notEqual(m.hashMap[_.keys(m.hashMap)[0]].value, -1)
 			})
