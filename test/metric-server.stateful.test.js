@@ -54,7 +54,7 @@ describe('#MetricServer#sync', () => {
 				assert.isAbove(countOfMatches(respLines, /minter_/), 4)
 				assert.isAbove(countOfMatches(respLines, /_net_info_/), 4)
 				assert.isAbove(countOfMatches(respLines, /_candidates_/), 4)
-				assert.equal(countOfMatches(respLines, /moniker=""/), 0)
+				// assert.equal(countOfMatches(respLines, /moniker=""/), 0)
 				defaultTargets.forEach(target => assert.isAbove(countOfMatches(respLines, `${target.url}`), 0))
 				defaultTargets.forEach(target => assert.equal(countOfMatches(respLines, `${target.url}/status`), 0))
 				defaultTargets.forEach(target => assert.equal(countOfMatches(respLines, `${target.url}/net_info`), 0))
