@@ -74,5 +74,28 @@ describe('TendermintMetricSet', () => {
 				assert.notEqual(m.hashMap[_.keys(m.hashMap)[0]].value, -1)
 			})
 		})
+
+		it('#candidatesExtractor should not add labels and metric with undefined labels', () => {
+			let tm = new TendermintMetricSet()
+			let mockData
+			expect(() => { mockData = JSON.parse(fs.readFileSync('test/mock/candidates_empty.json'))} ).not.throw()
+			tm.set('candidates', {}, mockData)
+			assert.equal(tm.metrics.length, 2)
+			tm.metrics.forEach(m => {
+				assert.isNotEmpty(_.keys(m.hashMap))
+				// should not return 2 metrics: one with empty total_stake other with missing_status
+				assert.equal(_.keys(m.hashMap).length, 2)
+				assert.notEqual(m.hashMap[_.keys(m.hashMap)[0]].value, -1)
+
+				_.values(m.hashMap).forEach(h => {
+					// if created_at_block is missing should return -1
+					if (h.labels.reward_addres == "MISSING_CREATED_AT_BLOCK") assert.equal(h.labels.created_at_block, -1)
+					// check if that's metric is not about stake
+					if (h.labels.reward_addres == "MISSING_TOTAL_STAKE") assert.equal(m.name, "minter_candidates_info_status")
+					// and this metric not about status
+					if (h.labels.reward_addres == "MISSING_STATUS") assert.equal(m.name, "minter_candidates_info_stake")
+				})
+			})
+		})
 	})
 })

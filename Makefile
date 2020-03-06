@@ -31,10 +31,10 @@ docker-test: docker-build-test docker-clean-test
 
 run:
 	-docker rm -f $(APP_NAME)
-	docker run --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
+	docker run --rm --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
 run-d:
 	-docker rm -f $(APP_NAME)
-	docker run -d --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
+	docker run -d --rm --name $(APP_NAME) -p 9675:9675 --rm $(DOCKER_ID_USER)/$(APP_NAME):$(APP_VERSION) serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates
 run-test-d: run-d
 	npm run test:mocha:ms:smoke
 	-docker rm -f $(APP_NAME)

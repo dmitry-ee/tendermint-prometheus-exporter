@@ -1,0 +1,26 @@
+{
+	"jsonrpc": "2.0",
+	"id": "",
+	"result": [{
+			"reward_address": "MISSING_TOTAL_STAKE",
+			"owner_address": "Mxf8a88c0ed668e995639cb8a08ffb38541bcc9045",
+			"pub_key": "Mpfe176f944623a8ca9f409a62f0ea3ca75c1cf8d89970adf9384fc9ae8d77fa0b",
+			"commission": "5",
+			"status":2,
+			"created_at_block": 404
+	},{
+			"reward_address": "MISSING_STATUS",
+			"owner_address": "Mxf8a88c0ed668e995639cb8a08ffb38541bcc9045",
+			"total_stake": "61654185995775247761475685",
+			"pub_key": "Mpfe176f944623a8ca9f409a62f0ea3ca75c1cf8d89970adf9384fc9ae8d77fa0b",
+			"commission": "5",
+			"created_at_block": 404
+	},{
+			"reward_address": "MISSING_CREATED_AT_BLOCK",
+			"owner_address": "Mxf8a88c0ed668e995639cb8a08ffb38541bcc9045",
+			"total_stake": "61654185995775247761475685",
+			"pub_key": "Mpfe176f944623a8ca9f409a62f0ea3ca75c1cf8d89970adf9384fc9ae8d77fa0b",
+			"commission": "5",
+			"status": 3
+	}]
+}

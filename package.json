@@ -1,6 +1,6 @@
 {
   "name": "tendermint-prometheus-exporter",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "description": "Prometheus Exporter for Tendermint Blockchain",
   "main": "index.js",
   "dependencies": {
@@ -12,6 +12,7 @@
     "prom-client": "^11.5.3",
     "prometheus-api-metrics": "^2.2.3",
     "request": "^2.88.0",
+    "set-interval-async": "^1.0.30",
     "winston": "^3.2.1",
     "yargs": "^15.1.0"
   },
