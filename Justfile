@@ -19,7 +19,7 @@ release comment:
 	@echo {{comment}}
 	git add -A
 	git commit -m "{{comment}}"
-	(build_test)
+	build_test()
 	git push origin
 
 clean: containers_clean_all images_clean_unused remove_images
