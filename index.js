@@ -23,7 +23,7 @@ parseNrun('', (argvParseErr, argv, parser) => {
 			port: argv.port | 9675,
 			timeout: argv.timeout | 1000,
 			targets: argv.targets,
-			metricsRetention: argv.retention | 600000,
+			metricsRetention: argv.retention | 3600000,
 		})
 		server.run()
 

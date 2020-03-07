@@ -4,10 +4,6 @@ RUN	set ex && npm install --production
 
 FROM	mhart/alpine-node:slim-12.1
 ARG	APP_DIR=/app
-ARG	EXPORTER_VERSION=0.0.0
-ARG	VCS_REF
-ARG	BUILD_DATE
-ENV	EXPORTER_VERSION=${EXPORTER_VERSION}
 LABEL	version=${EXPORTER_VERSION} \
 			org.label-schema.vcs-ref=${VCS_REF} \
 			org.label-schema.vcs-url="https://github.com/dmitry-ee/tendermint-prometheus-exporter"
@@ -21,5 +17,11 @@ ADD	./lib ${APP_DIR}/lib
 ADD	index.js package.json  ${APP_DIR}/
 
 EXPOSE	9675
+
+ARG	EXPORTER_VERSION=0.0.0
+ARG	VCS_REF
+ARG	BUILD_DATE
+ENV	EXPORTER_VERSION=${EXPORTER_VERSION}
+
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/node", "index"]
 CMD	["serve"]
