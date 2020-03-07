@@ -12,9 +12,11 @@ alias rmis := remove_images
 alias rmf := containers_clean_all
 alias v := version
 alias iv := increment_version
+alias bump := increment_version
 
+# tight everything up, commit, test and release
 release +comment:
-	@echo {{comment}}
+	@echo "{{comment}}"
 	git add -A
 	git commit -m "{{comment}}"
 	just build_test
@@ -58,9 +60,11 @@ remove_image image=(docker_image_name):
 remove_images:
 	@docker images | grep {{app_name}} | awk '{ print $3 }' | xargs -I{} docker rmi {}
 
+# print current image version
 version:
 	@echo {{docker_image_name}}
 
+# increment version
 increment_version ver="patch":
 	@echo 'before: {{docker_image_name}}'
 	npm version {{ver}} --no-git-tag-version
