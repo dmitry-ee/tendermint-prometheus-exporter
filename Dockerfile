@@ -11,7 +11,8 @@ LABEL version=${EXPORTER_VERSION} \
 MAINTAINER Dmitry E <https://github.com/dmitry-ee>
 WORKDIR $APP_DIR
 
-RUN   apk add --no-cache tini
+RUN   apk add --no-cache tini && \
+      rm -rf /lib/apk/db
 
 COPY  --from=builder /node_modules  ${APP_DIR}/node_modules
 ADD   ./lib ${APP_DIR}/lib
