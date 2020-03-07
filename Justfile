@@ -45,6 +45,14 @@ run-test-d: build-nc run-d
 
 bash:
   docker run -it --rm --name {{app_name}} {{docker_image_name}} sh
+compose:
+  docker-compose up -d
+compose-down:
+  docker-compose down
+logs:
+  docker logs {{app_name}}
+metrics:
+  curl http://localhost:{{start_port}}/metrics
 
 coveralls:
 	npm run coveralls

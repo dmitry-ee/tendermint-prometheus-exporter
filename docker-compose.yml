@@ -8,9 +8,11 @@ services:
       - LOG_LEVEL=info
     ports:
       - "9675:9675"
+    # cosmos validator info + status not supported yet
     command: >
       serve
       --port 9675
-      --timeout 1000
+      --timeout 5000
       --target https://api.minter.one --status --net-info --candidates --
-      --target http://api-01.minter.store:8841 --status --net-info --candidates
+      --target http://api-01.minter.store:8841 --status --net-info --candidates --
+      --target http://cosmos-node.sparkpool.com:26657 --net-info
