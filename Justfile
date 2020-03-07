@@ -7,19 +7,17 @@ commit := `git rev-parse --short HEAD`
 start_port := "9675"
 start_cmd := "serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates"
 
-default := 'all'
-
 alias rmi := images_clean_unused
 alias rmis := remove_images
 alias rmf := containers_clean_all
 alias v := version
 alias iv := increment_version
 
-release comment:
+release +comment:
 	@echo {{comment}}
 	git add -A
 	git commit -m "{{comment}}"
-	build_test()
+	build_test
 	git push origin
 
 clean: containers_clean_all images_clean_unused remove_images
