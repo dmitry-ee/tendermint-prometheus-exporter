@@ -21,10 +21,6 @@ release +comment:
 	just build-test
 	git push origin
 
-clean: containers-clean-all images-clean-unused remove-images
-	docker ps -a
-	docker images
-
 _build build_args="--squash --no-cache":
 	docker build {{build_args}} -t {{docker_image_name}} \
 	--build-arg EXPORTER_VERSION={{app_version}} \
@@ -64,6 +60,10 @@ publish: build-nc push
 dive:
   dive {{docker_image_name}}
 
+
+clean: containers-clean-all images-clean-unused remove-images
+	docker ps -a
+	docker images
 images-clean-unused:
 	docker images | grep none | awk '{ print $3 }' | xargs -I{} docker rmi {}
 containers-clean-all:
@@ -72,6 +72,7 @@ remove-image image=(docker_image_name):
 	docker rmi {{image}}
 remove-images:
 	@docker images | grep {{app_name}} | awk '{ print $3 }' | xargs -I{} docker rmi {}
+
 
 # print current image version
 version:
