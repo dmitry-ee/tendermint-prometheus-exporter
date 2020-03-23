@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   tendermint-prometheus-exporter:
@@ -7,7 +7,7 @@ services:
     environment:
       - LOG_LEVEL=info
     ports:
-      - "9675:9675"
+      - 9675:9675
     # cosmos validator info + status not supported yet
     command: >
       serve

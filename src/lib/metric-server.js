@@ -106,7 +106,7 @@ class MetricServer {
 	asyncScraperBuilder(targets, metrics, timeout=1000) {
 		let asyncRequest = new ParallelRequest({ response: 'simple' })
 
-		logger.info('#asyncScraperBuilder - building scrapers...')
+		logger.debug('#asyncScraperBuilder - building scrapers...')
 
 		targets.forEach(target => {
 			if (target.status)
@@ -117,7 +117,7 @@ class MetricServer {
 				asyncRequest.add({ url: `${target.url}/candidates`, method: 'get', timeout: timeout })
 		})
 
-		logger.info(`#asyncScraperBuilder - success!`)
+		logger.debug(`#asyncScraperBuilder - success!`)
 
 		return (req, res, next) => {
 			asyncRequest.send(resp => {

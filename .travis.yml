@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 12.1
 before_install:
-  - npm i nyc -g
+  - npm i nyc@15.0.0 -g
 git:
   depth: 10
 branches:
