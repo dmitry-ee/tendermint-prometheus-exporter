@@ -7,11 +7,13 @@ commit := `git rev-parse --short HEAD`
 start_port := "9675"
 start_cmd := "serve --target=https://api.minter.one --status --net-info --candidates -- --target http://api-01.minter.store:8841 --net-info --status --candidates"
 
+
 alias rmi := images-clean-unused
 alias rmis := remove-images
 alias rmf := containers-clean-all
 alias v := version
 alias bump := increment-version
+
 
 # tight everything up, commit, test and release
 release +comment:
@@ -20,6 +22,7 @@ release +comment:
 	git commit -m "{{comment}}"
 	just build-test
 	git push origin
+
 
 _build build_args="--squash --no-cache":
 	docker build {{build_args}} -t {{docker_image_name}} \
@@ -35,6 +38,7 @@ build-test:
 	docker build -t {{docker_image_name}}-test -f Dockerfile-test .
 	docker rmi -f {{docker_image_name}}-test
 
+
 _run mode="":
 	docker run {{mode}} --rm --name {{app_name}} -p {{start_port}}:9675 {{docker_image_name}} {{start_cmd}}
 # run in detached mode (-d)
@@ -43,6 +47,7 @@ run-d: (_run "-d")
 run-test-d: build-nc run-d
 	npm run test:mocha:ms:smoke
 	docker rm -f {{app_name}}
+
 
 # sh into container
 bash:
