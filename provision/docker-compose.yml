@@ -5,7 +5,6 @@ volumes:
   grafana_data: {}
 
 networks:
-  front-tier:
   back-tier:
 
 services:
