@@ -50,7 +50,7 @@ services:
     image: dmi7ry/minter-node:${MINTER_NODE_VERSION}
     container_name: minter_node
     volumes:
-      - ${MINTER_DATA_PATH}:/minter
+      - ${MINTER_DATA_DIR}:/minter
     # ports:
     #   - 8841:8841
     networks:

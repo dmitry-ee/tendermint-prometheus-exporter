@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MINTER_DIR="/minter"
-MINTER_VERSION="latest"
+MINTER_DATA_DIR="/minter"
+MINTER_NODE_VERSION="latest"
 
 mkdir -p $MINTER_DIR/config
 chown -R 999:1000 $MINTER_DIR
