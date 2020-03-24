@@ -3,7 +3,7 @@
 MINTER_DIR="/minter"
 MINTER_VERSION="latest"
 
-mkdir -p $MINTER_DIR
+mkdir -p $MINTER_DIR/config
 chown -R 999:1000 $MINTER_DIR
 
 if [ -f "$MINTER_DIR/config/config.toml" ]; then
