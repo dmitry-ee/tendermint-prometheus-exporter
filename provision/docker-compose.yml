@@ -20,8 +20,6 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
-      # - '--web.console.libraries=/usr/share/prometheus/console_libraries'
-      # - '--web.console.templates=/usr/share/prometheus/consoles'
     ports:
       - 9090:9090
     networks:
@@ -38,32 +36,21 @@ services:
     ports:
       - 3000:3000
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      # - GF_SECURITY_ADMIN_USER=admin
+      # - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_AUTH_ANONYMOUS_ENABLED=true
     volumes:
-      - ./grafana/provisioning/:/etc/grafana/provisioning/
+      - ./grafana/provisioning/:/etc/grafana/provisioning
       - ./grafana/dashboards:/var/lib/grafana/dashboards
     networks:
       - back-tier
-      - front-tier
     restart: always
 
-  minter_genesys:
-    image: dmi7ry/minter-node:1.1.5
-    container_name: minter_genesys
-    volumes:
-      - ./minter_data:/minter
-    command: >
-      fetch-genesis
-
   minter_node:
-    image: dmi7ry/minter-node:1.1.5
+    image: dmi7ry/minter-node:${MINTER_NODE_VERSION}
     container_name: minter_node
     volumes:
-      - ./minter_data:/minter
-    depends_on:
-      - minter_genesys
+      - ${MINTER_DATA_PATH}:/minter
     # ports:
     #   - 8841:8841
     networks:
@@ -77,8 +64,8 @@ services:
       - minter_node
     networks:
       - back-tier
-    environment:
-      - LOG_LEVEL=info
+    # environment:
+    #   - LOG_LEVEL=info
     # ports:
     #   - 9675:9675
     command: >
