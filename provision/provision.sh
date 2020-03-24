@@ -11,7 +11,8 @@ if [ -f "$MINTER_DATA_DIR/config/config.toml" ]; then
 else
   # generate config
   echo "$MINTER_DATA_DIR/config/config.toml does not exists!"
-  docker run --name minter-config-gen --rm -v $MINTER_DATA_DIR:/minter dmi7ry/minter-node:$MINTER_NODE_VERSION
+  docker run --name minter-config-gen --rm -v $MINTER_DATA_DIR:/minter dmi7ry/minter-node:$MINTER_NODE_VERSION show_validator
+  sed -i 's/prometheus = false/prometheus = true/' $MINTER_DATA_DIR/config/config.toml
 fi
 
 if [ -f "$MINTER_DATA_DIR/config/genesis.json" ]; then
