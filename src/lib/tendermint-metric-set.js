@@ -83,7 +83,7 @@ class TendermintMetricSet extends MetricSet {
 
     keys(metrics).forEach(context => {
       metrics[context].forEach(metric => {
-        super.add(combakntext, clone(metric))
+        super.add(context, clone(metric))
       })
   	})
   }
