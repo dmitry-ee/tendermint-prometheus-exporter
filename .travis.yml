@@ -1,9 +1,12 @@
 dist: trusty
 
+language: node_js
+node_js:
+  - 12.1
+
 before_install:
-  - nvm install 12.1
   - npm i nyc@15.0.0 -g
-  - sudo curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin
+  - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
 git:
   depth: 10
 branches:
