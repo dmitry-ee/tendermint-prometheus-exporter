@@ -5,6 +5,7 @@
 [![Image Pulls](https://img.shields.io/docker/pulls/dmi7ry/tendermint-prometheus-exporter)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
 [![Build Automation](https://img.shields.io/docker/cloud/automated/dmi7ry/tendermint-prometheus-exporter)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
 [![Build Status](https://img.shields.io/docker/cloud/build/dmi7ry/tendermint-prometheus-exporter)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
+
 Tendermint exporter for Prometheus
 
 ## Table of Contents
