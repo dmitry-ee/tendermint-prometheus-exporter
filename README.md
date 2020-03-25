@@ -19,12 +19,12 @@ Tendermint exporter for Prometheus
   - [Cosmos](#cosmos)
 - [Preview](#preview)
 
-### Download
+## Download
 ```bash
 docker pull dmi7ry/tendermint-prometheus-exporter:latest
 ```
-### Run
-#### docker run
+## Run
+### docker run
 ```bash
 docker run -d --rm -p 9675:9675 dmi7ry/tendermint-prometheus-exporter:latest serve --port 9675 --timeout 5000 --target https://api.minter.one --status --net-info --candidates -- [--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates]]
 ```
@@ -39,10 +39,10 @@ See [docker-compose.yml](docker-compose.yml)
 | status or no-status | false | enable scrape for /status url |
 | net-info or no-net-info | false | enable scrape for /net_info url |
 | candidates or no-candidates | false | enable scrape for /candidates url |
-##### NOTE
+#### NOTE
 each target should be denoted with double dash after defenition (see #docker-run-command)
 
-### Minter Auto Provision
+## Minter Auto Provision
 You can install & setup full stack just in one script
 ```bash
 git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
@@ -56,8 +56,8 @@ It will install:
 - Grafana
 - Grafana datasource & dashboard (for manual import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
 
-### Supported Blockchains
-#### Minter
+## Supported Blockchains
+### Minter
 Supported urls:
 - **/status** enables with `--status` arg
 - **/net_info** enables with `--net-info` arg
@@ -65,11 +65,11 @@ Supported urls:
 
 [Grafana Dashboard](provision/grafana/minter-dashboard.json) (importable via Import Dashboard)
 [Metrics Sample](stubs/minter-metrics.txt)
-#### Cosmos
+### Cosmos
 Supported urls:
 - **/net_info** enables with `--net-info` arg
 
 [Metrics Sample](stubs/cosmos-metrics.txt)
 
-### Preview
+## Preview
 ![Dashboard Preview](img/dashboard.gif)
