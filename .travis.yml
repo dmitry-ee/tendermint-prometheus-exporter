@@ -1,8 +1,11 @@
+dist: trusty
+
 language: node_js
 node_js:
   - 12.1
 before_install:
   - npm i nyc@15.0.0 -g
+  - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to DEST
 git:
   depth: 10
 branches:
@@ -12,4 +15,22 @@ notifications:
   email:
     on_success: never
     on_failure: change
-script: cd src && npm install && npm test
+
+jobs:
+  include:
+    - stage: npm test
+      script: just test
+
+    - stage: image build
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - just build-c
+
+    - stage: docker test
+      script: just build-test
+
+    - stage: smoke test
+      script: just run-test-d
+
+    - stage: push new image
+      script: just push && just push-latest

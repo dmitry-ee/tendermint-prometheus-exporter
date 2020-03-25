@@ -39,6 +39,9 @@ build-test:
 	docker build -t {{docker_image_name}}-test -f src/Dockerfile-test .
 	docker rmi -f {{docker_image_name}}-test
 
+# run test
+test:
+  cd src && npm install --save-dev && npm test
 
 _run mode="" START_CMD=minter_start_cmd:
 	docker run {{mode}} --rm --name {{app_name}} -p {{start_port}}:9697 {{docker_image_name}} {{START_CMD}}
@@ -73,6 +76,9 @@ coveralls:
 # push image to dockerhub
 push IMAGE=(docker_image_name):
 	docker push {{IMAGE}}
+# push latest image to dockerhub
+push-latest:
+  docker push docker_user_id + "/" + app_name + ":latest"
 # build --no-cache then push
 publish: build-nc push
 
