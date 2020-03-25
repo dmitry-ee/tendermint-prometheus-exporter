@@ -4,6 +4,8 @@ language: node_js
 node_js:
   - 12.1
 
+cache: npm
+
 before_install:
   - npm i nyc@15.0.0 -g
   - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
@@ -24,7 +26,7 @@ jobs:
 
     - stage: image build
       script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "dmi7ry" --password-stdin
         - just build-c
 
     - stage: docker test
