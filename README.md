@@ -20,6 +20,7 @@ Tendermint exporter for Prometheus
   - [Minter](#minter)
   - [Cosmos](#cosmos)
 - [Preview](#preview)
+- [Donate](#donate)
 
 ## Download
 ```bash
@@ -80,3 +81,7 @@ Supported urls:
 
 ## Preview
 ![Dashboard Preview](img/dashboard.gif)
+
+## Donate
+Minter: Mx65bb9548ecde11e10cd823e365fd2fb0f4f03b25
+![QR](img/bip.png | width=200)
