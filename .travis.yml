@@ -1,19 +1,15 @@
 dist: trusty
-
-language: node_js
-node_js:
-  - 12.1
-
+language: ruby
 cache: npm
+services:
+  - docker
 
 before_install:
-  - npm i nyc@15.0.0 -g
   - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
+
 git:
   depth: 10
-branches:
-  only:
-    - master
+
 notifications:
   email:
     on_success: never
@@ -21,19 +17,17 @@ notifications:
 
 jobs:
   include:
-    - stage: npm test
-      script: just test
+    - stage: test
+      script: nvm install 12.1 && npm i nyc@15.0.0 -g
+    - script: just test
+    - script: just run-test-d
+    - script: just build-test
 
     - stage: image build
       script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "dmi7ry" --password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - just build-c
-
-    - stage: docker test
-      script: just build-test
-
-    - stage: smoke test
-      script: just run-test-d
 
     - stage: push new image
       script: just push && just push-latest
+      if: branch = master
