@@ -1,6 +1,6 @@
 FROM  mhart/alpine-node:12.1
 ARG   APP_DIR=/app
-COPY  src/ ${APP_DIR}
+COPY  ./ ${APP_DIR}
 WORKDIR	${APP_DIR}
 RUN   npm install -g nyc@15.0.0 && \
       npm install && \
