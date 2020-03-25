@@ -1,6 +1,6 @@
 {
   "name": "tendermint-prometheus-exporter",
-  "version": "0.9.25",
+  "version": "0.9.26",
   "description": "Prometheus Exporter for Tendermint Blockchain",
   "main": "index.js",
   "dependencies": {
