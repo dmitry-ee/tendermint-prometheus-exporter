@@ -85,4 +85,4 @@ Supported urls:
 ## Donate
 Minter: Mx65bb9548ecde11e10cd823e365fd2fb0f4f03b25
 
-<img alt="QR" src="https://github.com/dmitry-ee/tendermint-prometheus-exporter/blob/master/img/bip.png?raw=true" width="200" height="200">
+<img alt="QR" href="#" src="https://github.com/dmitry-ee/tendermint-prometheus-exporter/blob/master/img/bip.png?raw=true" width="200" height="200">
