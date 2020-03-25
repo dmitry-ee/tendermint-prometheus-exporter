@@ -72,7 +72,9 @@ Supported urls:
 - **/candidates** enables with `--candidates` flag
 
 [Grafana Dashboard](provision/grafana/minter-dashboard.json) (importable via Import Dashboard)
+
 [Metrics Sample](stubs/minter-metrics.txt)
+
 ### Cosmos
 Supported urls:
 - **/net_info** enables with `--net-info` flag
