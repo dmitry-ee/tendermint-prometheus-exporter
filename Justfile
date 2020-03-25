@@ -29,14 +29,14 @@ _build build_args="--squash --no-cache":
 	docker build {{build_args}} -t {{docker_image_name}} \
 	--build-arg EXPORTER_VERSION={{app_version}} \
 	--build-arg BUILD_DATE={{build_date}} \
-	--build-arg VCS_REF={{commit}} .
+	--build-arg VCS_REF={{commit}} -f src/Dockerfile .
 # docker build with cache with squash flag
 build-c: (_build "--squash")
 # docker build --no-cache
 build-nc: (_build "--squash --no-cache")
 # docker build & run image with autotests
 build-test:
-	docker build -t {{docker_image_name}}-test -f Dockerfile-test .
+	docker build -t {{docker_image_name}}-test -f src/Dockerfile-test .
 	docker rmi -f {{docker_image_name}}-test
 
 
@@ -55,10 +55,10 @@ bash:
   docker run -it --rm --name {{app_name}} {{docker_image_name}} sh
 # start container with docker-compose
 compose:
-  docker-compose up -d
+  docker-compose -f src/docker-compose.yml up -d
 # stop container with docker-compose
 compose-down:
-  docker-compose down
+  docker-compose -f src/docker-compose.yml down
 # docker logs
 logs:
   docker logs {{app_name}}

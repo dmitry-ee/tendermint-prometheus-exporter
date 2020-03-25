@@ -14,6 +14,7 @@ Tendermint exporter for Prometheus
 - [Run](#run)
   - [docker run](#docker-run)
   - [docker compose](#docker-compose)
+- [Manual Build](#manual-build)
 - [Flags](#flags)
 - [Minter Auto Provision](#minter-auto-provision)
 - [Supported Blockchains](#supported-blockchains)
@@ -35,6 +36,17 @@ docker run -d --rm -p 9697:9697 dmi7ry/tendermint-prometheus-exporter:latest ser
 ```
 ### docker-compose
 See [docker-compose.yml](docker-compose.yml)
+
+## Manual Build
+Requirement: [Just](https://github.com/casey/just)
+
+```bash
+just build-c
+```
+or
+```bash
+just build-nc
+```
 
 ## Flags
 | flag name | defaults | description |
