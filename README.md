@@ -58,7 +58,7 @@ just build-nc
 | net-info or no-net-info | false | enable scrape for /net_info url |
 | candidates or no-candidates | false | enable scrape for /candidates url |
 #### NOTE
-each target should be denoted with double dash after defenition (see [docker run](#docker-run-command))
+each target should be denoted with double dash after defenition (see [docker run](#docker-run))
 
 ## Minter Auto Provision
 You can install & setup full stack just in one script
