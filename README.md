@@ -51,7 +51,7 @@ each target should be denoted with double dash after defenition (see [docker run
 You can install & setup full stack just in one script
 ```bash
 git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
-cd provision
+cd tendermint-prometheus-exporter/provision/
 ./provision
 ```
 See [provision script](provision/provision.sh)
