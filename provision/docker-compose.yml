@@ -1,0 +1,76 @@
+version: '2'
+
+volumes:
+  prometheus_data: {}
+  grafana_data: {}
+
+networks:
+  back-tier:
+
+services:
+
+  prometheus:
+    image: prom/prometheus:v2.16.0
+    container_name: prometheus
+    mem_limit: 200m
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    ports:
+      - 9090:9090
+    networks:
+      - back-tier
+    restart: always
+
+  grafana:
+    image: grafana/grafana:6.7.1
+    container_name: grafana
+    mem_limit: 50m
+    user: "104"
+    depends_on:
+      - prometheus
+    ports:
+      - 3000:3000
+    environment:
+      # - GF_SECURITY_ADMIN_USER=admin
+      # - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    networks:
+      - back-tier
+    restart: always
+
+  minter_node:
+    image: dmi7ry/minter-node:${MINTER_NODE_VERSION}
+    container_name: minter_node
+    volumes:
+      - ${MINTER_DATA_DIR}:/minter
+    # ports:
+    #   - 8841:8841
+    networks:
+      - back-tier
+
+  minter_exporter:
+    image: dmi7ry/tendermint-prometheus-exporter:0.9.25
+    container_name: minter_exporter
+    mem_limit: 50m
+    depends_on:
+      - minter_node
+    networks:
+      - back-tier
+    # environment:
+    #   - LOG_LEVEL=info
+    # ports:
+    #   - 9675:9675
+    command: >
+      serve
+      --port 9675
+      --timeout 5000
+      --target https://api.minter.one --status --net-info --
+      --target http://api-01.minter.store:8841 --status --net-info --
+      --target http://minter_node:8841 --status --net-info --candidates --
