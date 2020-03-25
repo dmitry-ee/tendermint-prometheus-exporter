@@ -30,8 +30,10 @@ _build build_args="--squash --no-cache":
 	--build-arg EXPORTER_VERSION={{app_version}} \
 	--build-arg BUILD_DATE={{build_date}} \
 	--build-arg VCS_REF={{commit}} -f src/Dockerfile .
+# docker build simply with cache
+build-c: (_build "")
 # docker build with cache with squash flag
-build-c: (_build "--squash")
+build-sq: (_build "--squash")
 # docker build --no-cache
 build-nc: (_build "--squash --no-cache")
 # docker build & run image with autotests
