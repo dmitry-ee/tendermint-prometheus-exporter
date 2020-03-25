@@ -18,8 +18,8 @@ notifications:
 jobs:
   include:
     - stage: test
-      script: nvm install 12.1 && npm i nyc@15.0.0 -g
-    - script: just test
+      install: nvm install 12.1 && npm i nyc@15.0.0 -g
+      script: just test
     - script: just run-test-d
     - script: just build-test
 
