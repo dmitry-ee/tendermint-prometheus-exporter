@@ -1,2 +1,8 @@
-./node_modules
-./coverage
+node_modules
+coverage
+stubs
+img
+provision
+src/node_modules
+src/coverage
+.git

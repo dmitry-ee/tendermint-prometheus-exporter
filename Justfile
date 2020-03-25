@@ -46,7 +46,7 @@ _run mode="" START_CMD=minter_start_cmd:
 run-d: (_run "-d")
 # run in detached mode and perform smoke tests
 run-test-d: build-nc run-d
-	npm run test:mocha:ms:smoke
+	cd src && npm run test:mocha:ms:smoke
 	docker rm -f {{app_name}}
 
 
