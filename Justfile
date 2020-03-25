@@ -35,7 +35,7 @@ build-c: (_build "")
 # docker build with cache with squash flag
 build-sq: (_build "--squash")
 # docker build --no-cache
-build-nc: (_build "--squash --no-cache")
+build-nc: (_build "--no-cache")
 # docker build & run image with autotests
 build-test:
 	docker build -t {{docker_image_name}}-test -f src/Dockerfile-test .
