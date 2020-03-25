@@ -10,14 +10,14 @@ Tendermint exporter for Prometheus
 ## Table of Contents
 - [Download](#download)
 - [Run](#run)
- - [docker run](#docker-run)
- - [docker compose](#docker-compose)
+  - [docker run](#docker-run)
+  - [docker compose](#docker-compose)
 - [Flags](#flags)
 - [Minter Auto Provision](#minter-auto-provision)
 - [Supported Blockchains](#supported-blockchains)
- - [Minter](#minter)
- - [Cosmos](#cosmos)
-- [Previes](#preview)
+  - [Minter](#minter)
+  - [Cosmos](#cosmos)
+- [Preview](#preview)
 
 ### Download
 ```bash
