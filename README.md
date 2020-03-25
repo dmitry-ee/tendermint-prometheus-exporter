@@ -53,6 +53,8 @@ git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
 cd provision
 ./provision
 ```
+See [provision script](provision/provision.sh)
+
 It will install:
 - Minter Node (with enabled prometheus)
 - Tendermint Prometheus Exporter
