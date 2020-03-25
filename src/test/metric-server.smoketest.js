@@ -19,7 +19,7 @@ describe('#MetricServer #SMOKE', () => {
 
 		describe('get /', () => {
 			it('should return 200', () => {
-				chai.request('http://localhost:9675').get('/').end((err, resp) => {
+				chai.request('http://localhost:9697').get('/').end((err, resp) => {
 					assert.isNull(err)
 					assert.isDefined(resp)
 					assert.equal(resp.status, 200)
@@ -29,7 +29,7 @@ describe('#MetricServer #SMOKE', () => {
 		})
 
 		it('should properly return both status, net_info, candidates', (done) => {
-			chai.request('http://localhost:9675').get('/metrics').end((err, resp) => {
+			chai.request('http://localhost:9697').get('/metrics').end((err, resp) => {
 				// logger.error(err)
 				respLines = resp.text.split(/\r?\n/)
 				assert.isAbove(countOfMatches(respLines, /minter_/), 4)

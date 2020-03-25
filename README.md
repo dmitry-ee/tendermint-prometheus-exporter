@@ -30,7 +30,7 @@ See [DockerHub Image](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-expo
 ## Run
 ### docker run
 ```bash
-docker run -d --rm -p 9675:9675 dmi7ry/tendermint-prometheus-exporter:latest serve --port 9675 --timeout 5000 --target https://api.minter.one --status --net-info --candidates -- [--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates]]
+docker run -d --rm -p 9697:9697 dmi7ry/tendermint-prometheus-exporter:latest serve --port 9697 --timeout 5000 --target https://api.minter.one --status --net-info --candidates -- [--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates]]
 ```
 ### docker-compose
 See [docker-compose.yml](docker-compose.yml)
@@ -38,7 +38,7 @@ See [docker-compose.yml](docker-compose.yml)
 ## Flags
 | flag name | defaults | description |
 | -- | -- | -- |
-| port | 9675 | port to listen at (should be exposed with -p arg) |
+| port | 9697 | port to listen at (should be exposed with -p arg) |
 | timeout | 1000 | max response time to exporter waiting for in milliseconds |
 | target | null | api url to scrape (for Minter it's a port 8841) |
 | status or no-status | false | enable scrape for /status url |

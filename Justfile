@@ -4,7 +4,7 @@ docker_user_id := "dmi7ry"
 docker_image_name := docker_user_id + "/" + app_name + ":" + app_version
 build_date := `date -u +"%Y-%m-%dT%H:%M:%SZ"`
 commit := `git rev-parse --short HEAD`
-start_port := "9675"
+start_port := "9697"
 minter_start_cmd := "serve --target=https://api.minter.one --status --net-info --candidates"
 cosmos_start_cmd := "serve --target http://cosmos-node.sparkpool.com:26657 --net-info"
 
@@ -41,7 +41,7 @@ build-test:
 
 
 _run mode="" START_CMD=minter_start_cmd:
-	docker run {{mode}} --rm --name {{app_name}} -p {{start_port}}:9675 {{docker_image_name}} {{START_CMD}}
+	docker run {{mode}} --rm --name {{app_name}} -p {{start_port}}:9697 {{docker_image_name}} {{START_CMD}}
 # run in detached mode (-d)
 run-d: (_run "-d")
 # run in detached mode and perform smoke tests
@@ -101,13 +101,13 @@ remove-images:
 # generate stub file for minter
 stub-minter: containers-clean-all run-d
   sleep 1
-  curl -sXGET localhost:9675/metrics > stubs/minter-metrics.txt
+  curl -sXGET localhost:9697/metrics > stubs/minter-metrics.txt
   docker rm -f {{app_name}}
 
 # generate stub for cosmos
 stub-cosmos: containers-clean-all (_run "-d" cosmos_start_cmd)
   sleep 1
-  curl -sXGET localhost:9675/metrics > stubs/cosmos-metrics.txt
+  curl -sXGET localhost:9697/metrics > stubs/cosmos-metrics.txt
   docker rm -f {{app_name}}
 
 # print current image version

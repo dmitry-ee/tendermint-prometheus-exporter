@@ -17,7 +17,7 @@ RUN   apk add --no-cache tini && \
 COPY  --from=builder /node_modules  ${APP_DIR}/node_modules
 ADD   ./src ${APP_DIR}
 
-EXPOSE 9675
+EXPOSE 9697
 
 ARG EXPORTER_VERSION=0.0.0
 ARG VCS_REF

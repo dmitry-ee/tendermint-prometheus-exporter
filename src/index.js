@@ -20,7 +20,7 @@ parseNrun('', (argvParseErr, argv, parser) => {
 		showDisclaimer()
 		logger.warn(`starting with options ${JSON.stringify(argv)}`)
 		let server = new MetricServer({
-			port: argv.port | 9675,
+			port: argv.port | 9697,
 			timeout: argv.timeout | 1000,
 			targets: argv.targets,
 			metricsRetention: argv.retention | 3600000,

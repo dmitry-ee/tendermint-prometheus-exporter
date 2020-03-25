@@ -24,7 +24,7 @@ class MetricServer {
 		})
 
 		assign(this, {
-			_port: 9675,
+			_port: 9697,
 			_targets: [],
 			_targetOpts: [],
 			_timeout: 1000,
