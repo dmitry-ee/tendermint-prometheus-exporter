@@ -59,15 +59,15 @@ It will install:
 ## Supported Blockchains
 ### Minter
 Supported urls:
-- **/status** enables with `--status` arg
-- **/net_info** enables with `--net-info` arg
-- **/candidates** enables with `--candidates` arg
+- **/status** enables with `--status` flag
+- **/net_info** enables with `--net-info` flag
+- **/candidates** enables with `--candidates` flag
 
 [Grafana Dashboard](provision/grafana/minter-dashboard.json) (importable via Import Dashboard)
 [Metrics Sample](stubs/minter-metrics.txt)
 ### Cosmos
 Supported urls:
-- **/net_info** enables with `--net-info` arg
+- **/net_info** enables with `--net-info` flag
 
 [Metrics Sample](stubs/cosmos-metrics.txt)
 
