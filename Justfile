@@ -78,7 +78,7 @@ push IMAGE=(docker_image_name):
 	docker push {{IMAGE}}
 # push latest image to dockerhub
 push-latest:
-  docker push docker_user_id + "/" + app_name + ":latest"
+  docker push "{{docker_user_id}}/{{app_name}}:latest"
 # build --no-cache then push
 publish: build-nc push
 
