@@ -16,6 +16,8 @@ jobs:
         run: |
           echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
           echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
+          echo "::set-env name=BUILD_DATE::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "::set-env name=VCS_REF::$(git rev-parse --short HEAD)"
 
       - name: build & push
         uses: opspresso/action-docker@master
@@ -25,3 +27,4 @@ jobs:
           IMAGE_NAME: "${{ secrets.DOCKER_HUB_USER }}/${{ env.APP_NAME }}"
           LATEST: true
           TAG_NAME: ${{ env.VERSION }}
+          DOCKER_BUILD_ARGS: "--build-arg EXPORTER_VERSION=${{ env.VERSION }} --build-arg BUILD_DATE=${{ env.BUILD_DATE }} --build-arg VCS_REF=${{ env.COMMIT_SHORT }}"
