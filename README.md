@@ -39,8 +39,7 @@ See [DockerHub Image](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-expo
 docker run -d -—name tendermint-exporter --rm \
   -p 9697:9697 \
   dmi7ry/tendermint-prometheus-exporter:latest \
-  serve --port 9697 --timeout 5000 \
-  --target https://api.minter.one --status --net-info --candidates --
+  serve [--port N] [--timeout N] \
   [--target scrape_url_1 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
   [--target scrape_url_2 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
 ```
@@ -51,8 +50,6 @@ docker run -d -—name tendermint-exporter --rm \
   dmi7ry/tendermint-prometheus-exporter:latest \
   serve --port 9697 --timeout 5000 \
   --target https://api.minter.one --status --net-info --candidates --
-  [--target scrape_url_1 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
-  [--target scrape_url_2 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
 ```
 ### docker-compose
 See [docker-compose.yml](src/docker-compose.yml)
