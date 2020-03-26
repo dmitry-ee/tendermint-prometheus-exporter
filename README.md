@@ -94,12 +94,7 @@ See [provision with node](provision/provision-with-node.sh) and [provision only 
 
 Check & Set Minter Api urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
 
-It will install:
-- Minter Node (with enabled prometheus)
-- Tendermint Prometheus Exporter
-- Prometheus
-- Grafana
-- Grafana datasource & dashboard (for manual import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
+For manual dashboard import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
 
 ## Supported Blockchains
 ### Minter
@@ -116,6 +111,7 @@ Supported urls:
 
 ### Cosmos
 **NOTE:** Cosmos is not fully supported yet
+
 Supported urls:
 - **/net_info** enables with `--net-info` flag
 
