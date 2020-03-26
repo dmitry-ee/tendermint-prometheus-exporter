@@ -88,7 +88,7 @@ then run:
 - `./provision-with-node.sh` for deploy Minter-Node (with enabled Prometheus), Exporter, Grafana (with Dashboard) and Prometheus
 - `./provision-simply.sh` for deploy only Exporter, Grafana (with Dashboard) and Prometheus
 
-See [provision with node](provision/provision-with-node.sh) and [provision only monotiring](provision/provision-simply.sh)
+See [provision with node](provision/provision-with-node.sh) and [provision simply](provision/provision-simply.sh)
 
 Check & Set Minter Api urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
 
