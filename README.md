@@ -13,6 +13,7 @@ Tendermint exporter for Prometheus
 - [Download](#download)
 - [Run](#run)
   - [docker run](#docker-run)
+    - [Example](#example)
   - [docker compose](#docker-compose)
 - [Manual Build](#manual-build)
 - [Flags](#flags)
@@ -36,11 +37,20 @@ See [DockerHub Image](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-expo
 ### docker run
 ```bash
 docker run -d -—name tendermint-exporter --rm \
--p 9697:9697 \
-dmi7ry/tendermint-prometheus-exporter:latest \
-serve --port 9697 --timeout 5000 \
---target https://api.minter.one --status --net-info --candidates -- \
-[--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+  -p 9697:9697 \
+  dmi7ry/tendermint-prometheus-exporter:latest \
+  serve [--port N] [--timeout N] \
+  [--target scrape_url_1 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+  [--target scrape_url_2 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+```
+#### Example
+```bash
+docker run -d -—name tendermint-exporter --rm \
+  -p 9697:9697 \
+  dmi7ry/tendermint-prometheus-exporter:latest \
+  serve --port 9697 --timeout 5000 \
+  --target https://api.minter.one --status --net-info --candidates --
+  --target http://my-host:8841 --status --net-info --
 ```
 ### docker-compose
 See [docker-compose.yml](src/docker-compose.yml)
@@ -73,16 +83,16 @@ You can install & setup full stack just in one script
 ```bash
 git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
 cd tendermint-prometheus-exporter/provision/
-./provision
 ```
-See [provision script](provision/provision.sh)
+then run:
+- `./provision-with-node.sh` for deploy Minter-Node (with enabled Prometheus), Exporter, Grafana (with Dashboard) and Prometheus
+- `./provision-simply.sh` for deploy only Exporter, Grafana (with Dashboard) and Prometheus
 
-It will install:
-- Minter Node (with enabled prometheus)
-- Tendermint Prometheus Exporter
-- Prometheus
-- Grafana
-- Grafana datasource & dashboard (for manual import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
+See [provision with node](provision/provision-with-node.sh) and [provision simply](provision/provision-simply.sh)
+
+Check & Set Minter Api urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
+
+For manual dashboard import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
 
 ## Supported Blockchains
 ### Minter
@@ -98,11 +108,12 @@ Supported urls:
 [here](stubs/minter-metrics.txt)
 
 ### Cosmos
+**NOTE:** Cosmos is not fully supported yet
+
 Supported urls:
 - **/net_info** enables with `--net-info` flag
 
 #### Metrics Sample
-**NOTE:** Cosmos is not fully supported yet
 
 [here](stubs/cosmos-metrics.txt)
 

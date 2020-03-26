@@ -12,7 +12,11 @@ before_install:
   - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
 
 git:
-  depth: 10
+  depth: 3
+
+branches:
+  only:
+    - master
 
 notifications:
   email:
