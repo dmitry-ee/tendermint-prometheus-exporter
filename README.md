@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/dmitry-ee/tendermint-prometheus-exporter.svg?branch=master)](https://travis-ci.org/dmitry-ee/tendermint-prometheus-exporter)
 [![Build Status](https://img.shields.io/docker/cloud/build/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
 ![Language](https://img.shields.io/badge/language-nodejs-red.svg)
-![Version](https://images.microbadger.com/badges/version/dmi7ry/tendermint-prometheus-exporter.svg)
+[![Version](https://images.microbadger.com/badges/version/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter/tags?page=1&ordering=last_updated)
 [![Coverage Status](https://coveralls.io/repos/github/dmitry-ee/tendermint-prometheus-exporter/badge.svg?branch=master)](https://coveralls.io/github/dmitry-ee/tendermint-prometheus-exporter?branch=master)
 [![Build Automation](https://img.shields.io/docker/cloud/automated/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
 [![Image Pulls](https://img.shields.io/docker/pulls/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
@@ -32,7 +32,12 @@ See [DockerHub Image](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-expo
 ## Run
 ### docker run
 ```bash
-docker run -d --rm -p 9697:9697 dmi7ry/tendermint-prometheus-exporter:latest serve --port 9697 --timeout 5000 --target https://api.minter.one --status --net-info --candidates -- [--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+docker run -d -—name tendermint-exporter --rm \
+-p 9697:9697 \
+dmi7ry/tendermint-prometheus-exporter:latest \
+serve --port 9697 --timeout 5000 \
+--target https://api.minter.one --status --net-info --candidates -- \
+[--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
 ```
 ### docker-compose
 See [docker-compose.yml](src/docker-compose.yml)

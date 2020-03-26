@@ -1,5 +1,5 @@
 FROM  mhart/alpine-node:12.1 as builder
-COPY  ./package.json /
+COPY  src/package.json /
 RUN   set ex && npm install --production
 
 FROM  mhart/alpine-node:slim-12.1
@@ -15,7 +15,7 @@ RUN   apk add --no-cache tini && \
       rm -rf /lib/apk/db
 
 COPY  --from=builder /node_modules  ${APP_DIR}/node_modules
-ADD   . ${APP_DIR}
+ADD   src/ ${APP_DIR}
 
 EXPOSE 9697
 
