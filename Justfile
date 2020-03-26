@@ -25,18 +25,18 @@ release +comment:
 	git push origin
 
 
-_build build_args="--squash --no-cache":
+_build build_args="--no-cache":
 	docker build {{build_args}} -t {{docker_image_name}} \
 	--build-arg EXPORTER_VERSION={{app_version}} \
 	--build-arg BUILD_DATE={{build_date}} \
-	--build-arg VCS_REF={{commit}} -f src/Dockerfile .
+	--build-arg VCS_REF={{commit}} -f Dockerfile .
 # docker build with cache with squash flag
-build-c: (_build "--squash")
+build-c: (_build "")
 # docker build --no-cache
-build-nc: (_build "--squash --no-cache")
+build-nc: (_build " --no-cache")
 # docker build & run image with autotests
 build-test:
-	docker build -t {{docker_image_name}}-test -f src/Dockerfile-test .
+	docker build -t {{docker_image_name}}-test -f Dockerfile-test .
 	docker rmi -f {{docker_image_name}}-test
 
 
