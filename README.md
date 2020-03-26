@@ -50,6 +50,7 @@ docker run -d -—name tendermint-exporter --rm \
   dmi7ry/tendermint-prometheus-exporter:latest \
   serve --port 9697 --timeout 5000 \
   --target https://api.minter.one --status --net-info --candidates --
+  --target http://my-host:8841 --status --net-info --
 ```
 ### docker-compose
 See [docker-compose.yml](src/docker-compose.yml)
