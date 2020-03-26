@@ -15,13 +15,14 @@ notifications:
     on_success: never
     on_failure: change
 
+after_success: npm run coveralls
+
 jobs:
   include:
     - stage: test
-      install: nvm install 12.1 && npm i nyc@15.0.0 -g
+      install: nvm install 12.1 && npm i nyc@15.0.0 -g && npm i --save-dev
       script: just test
     - script: just run-test-d
-    - script: just build-test
 
     - stage: image build
       script:
