@@ -15,12 +15,13 @@ jobs:
       - name: get version
         run: |
           echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
+          echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
 
       - name: build & push
         uses: opspresso/action-docker@master
         env:
           USERNAME: ${{ secrets.DOCKER_HUB_USER }}
           PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          IMAGE_NAME: "dmi7ry/tendermint-prometheus-exporter"
-          # LATEST: "true"
+          IMAGE_NAME: "${{ secrets.DOCKER_HUB_USER }}/${{ env.APP_NAME }}"
+          LATEST: true
           TAG_NAME: ${{ env.VERSION }}
