@@ -87,11 +87,12 @@ git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
 cd tendermint-prometheus-exporter/provision/
 ```
 then run:
-- `./provision-with-node.sh` for deploy Minter-Node, Exporter, Grafana and Prometheus
-- `./provision-simply.sh` for deploy only Exporter, Grafana and Prometheus
+- `./provision-with-node.sh` for deploy Minter-Node (with enabled Prometheus), Exporter, Grafana (with Dashboard) and Prometheus
+- `./provision-simply.sh` for deploy only Exporter, Grafana (with Dashboard) and Prometheus
+
 See [provision with node](provision/provision-with-node.sh) and [provision only monotiring](provision/provision-simply.sh)
 
-Check Minter Api urls [here](provision/docker-compose-with-node.yml#74) and [here](provision/docker-compose-simply.yml#62)
+Check & Set Minter Api urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
 
 It will install:
 - Minter Node (with enabled prometheus)
@@ -114,11 +115,11 @@ Supported urls:
 [here](stubs/minter-metrics.txt)
 
 ### Cosmos
+**NOTE:** Cosmos is not fully supported yet
 Supported urls:
 - **/net_info** enables with `--net-info` flag
 
 #### Metrics Sample
-**NOTE:** Cosmos is not fully supported yet
 
 [here](stubs/cosmos-metrics.txt)
 
