@@ -19,10 +19,10 @@ Tendermint exporter for Prometheus
 - [Minter Auto Provision](#minter-auto-provision)
 - [Supported Blockchains](#supported-blockchains)
   - [Minter](#minter)
-    - [Grafana Dashboard](#grafana-dashboard_0)
-    - [Metrics Sample](#metrics-sample_0)
+    - [Grafana Dashboard](#grafana-dashboard)
+    - [Metrics Sample](#metrics-sample)
   - [Cosmos](#cosmos)
-    - [Metrics Sample](#metrics-sample_1)
+    - [Metrics Sample](#metrics-sample-1)
 - [Preview](#preview)
 - [Donate](#donate)
 
@@ -95,7 +95,7 @@ Supported urls:
 [here](provision/grafana/minter-dashboard.json) (importable via Import Dashboard)
 
 #### Metrics Sample
-[Metrics Sample](stubs/minter-metrics.txt)
+[here](stubs/minter-metrics.txt)
 
 ### Cosmos
 Supported urls:
@@ -103,7 +103,8 @@ Supported urls:
 
 #### Metrics Sample
 **NOTE:** Cosmos is not fully supported yet
-[Metrics Sample](stubs/cosmos-metrics.txt)
+
+[here](stubs/cosmos-metrics.txt)
 
 ## Preview
 ![Dashboard Preview](img/dashboard.gif)
