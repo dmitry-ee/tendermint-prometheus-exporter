@@ -31,7 +31,7 @@ jobs:
         - just build-c
 
     - stage: coveralls
-      install: npm i nyc@15.0.0 -g && npm i --save-dev
+      install: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
       script: npm run coveralls
       if: branch = master AND type = push
 
