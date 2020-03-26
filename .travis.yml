@@ -23,7 +23,9 @@ jobs:
   include:
     - stage: tests
       install: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
-      script: just test && just run-test-d
+      script:
+        - just test
+        - just run-test-d
 
     - stage: image build
       script:
@@ -36,5 +38,9 @@ jobs:
       if: branch = master AND type = push
 
     - stage: push new image
-      script: just build-nc && just push && just push-latest
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - just build-nc
+        - just push
+        - just push-latest
       if: branch = master AND type = push
