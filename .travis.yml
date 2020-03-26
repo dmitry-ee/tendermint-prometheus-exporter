@@ -16,8 +16,6 @@ notifications:
     on_success: never
     on_failure: change
 
-after_success: npm run coveralls
-
 jobs:
   include:
     - stage: tests
@@ -28,6 +26,11 @@ jobs:
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - just build-c
+
+    - stage: coveralls
+      install: nvm install 12.1 && npm i nyc@15.0.0 -g && npm i --save-dev
+      script: npm run coveralls
+      if: branch = master AND type = push
 
     - stage: push new image
       script: just build-nc && just push && just push-latest
