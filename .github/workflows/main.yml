@@ -22,4 +22,4 @@ jobs:
           PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
           IMAGE_NAME: "dmi7ry/tendermint-prometheus-exporter"
           # LATEST: "true"
-          TAG_NAME: ${{ VERSION }}
+          TAG_NAME: ${{ env.VERSION }}
