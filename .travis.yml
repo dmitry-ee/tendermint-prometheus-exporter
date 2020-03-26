@@ -22,7 +22,7 @@ notifications:
 jobs:
   include:
     - stage: tests
-      install: npm i nyc@15.0.0 -g && npm i --save-dev
+      install: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
       script: just test && just run-test-d
 
     - stage: image build
