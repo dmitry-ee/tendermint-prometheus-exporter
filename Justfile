@@ -2,6 +2,7 @@ app_version := `jq -r .version src/package.json`
 app_name := `jq -r .name src/package.json`
 docker_user_id := "dmi7ry"
 docker_image_name := docker_user_id + "/" + app_name + ":" + app_version
+docker_image_latest := docker_user_id + "/" + app_name + ":latest"
 build_date := `date -u +"%Y-%m-%dT%H:%M:%SZ"`
 commit := `git rev-parse --short HEAD`
 start_port := "9697"
@@ -78,6 +79,7 @@ push IMAGE=(docker_image_name):
 	docker push {{IMAGE}}
 # push latest image to dockerhub
 push-latest:
+  docker tag {{docker_image_name}} {{docker_image_latest}}
   docker push "{{docker_user_id}}/{{app_name}}:latest"
 # build --no-cache then push
 publish: build-nc push
