@@ -41,7 +41,7 @@ build-test:
 
 # run test
 test:
-  cd src && npm install --save-dev && npm test
+  cd src && && npm test
 
 _run mode="" START_CMD=minter_start_cmd:
 	docker run {{mode}} --rm --name {{app_name}} -p {{start_port}}:9697 {{docker_image_name}} {{START_CMD}}

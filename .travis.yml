@@ -1,6 +1,7 @@
 dist: trusty
-language: ruby
+language: node_js
 cache: npm
+
 services:
   - docker
 
@@ -29,5 +30,5 @@ jobs:
         - just build-c
 
     - stage: push new image
-      script: just push && just push-latest
-      if: branch = master
+      script: just build-nc && just push && just push-latest
+      if: branch = master AND type = push
