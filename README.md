@@ -13,6 +13,7 @@ Tendermint exporter for Prometheus
 - [Download](#download)
 - [Run](#run)
   - [docker run](#docker-run)
+    - [Example](#example)
   - [docker compose](#docker-compose)
 - [Manual Build](#manual-build)
 - [Flags](#flags)
@@ -36,11 +37,22 @@ See [DockerHub Image](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-expo
 ### docker run
 ```bash
 docker run -d -—name tendermint-exporter --rm \
--p 9697:9697 \
-dmi7ry/tendermint-prometheus-exporter:latest \
-serve --port 9697 --timeout 5000 \
---target https://api.minter.one --status --net-info --candidates -- \
-[--target scrape_url [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+  -p 9697:9697 \
+  dmi7ry/tendermint-prometheus-exporter:latest \
+  serve --port 9697 --timeout 5000 \
+  --target https://api.minter.one --status --net-info --candidates --
+  [--target scrape_url_1 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+  [--target scrape_url_2 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+```
+#### Example
+```bash
+docker run -d -—name tendermint-exporter --rm \
+  -p 9697:9697 \
+  dmi7ry/tendermint-prometheus-exporter:latest \
+  serve --port 9697 --timeout 5000 \
+  --target https://api.minter.one --status --net-info --candidates --
+  [--target scrape_url_1 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
+  [--target scrape_url_2 [--status|--no-status] [--net-info|--no-net-info] [--candidates|--no-candidates] --]
 ```
 ### docker-compose
 See [docker-compose.yml](src/docker-compose.yml)
@@ -73,9 +85,13 @@ You can install & setup full stack just in one script
 ```bash
 git clone https://github.com/dmitry-ee/tendermint-prometheus-exporter.git
 cd tendermint-prometheus-exporter/provision/
-./provision
 ```
-See [provision script](provision/provision.sh)
+then run:
+- `./provision-with-node.sh` for deploy Minter-Node, Exporter, Grafana and Prometheus
+- `./provision-simply.sh` for deploy only Exporter, Grafana and Prometheus
+See [provision with node](provision/provision-with-node.sh) and [provision only monotiring](provision/provision-simply.sh)
+
+Check Minter Api urls [here](provision/docker-compose-with-node.yml#74) and [here](provision/docker-compose-simply.yml#62)
 
 It will install:
 - Minter Node (with enabled prometheus)

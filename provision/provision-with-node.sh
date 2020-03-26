@@ -23,4 +23,4 @@ else
   docker run --name minter-genesis-fetch --rm -v $MINTER_DATA_DIR:/minter dmi7ry/minter-node:$MINTER_NODE_VERSION fetch-genesis
 fi
 
-docker-compose up -d --remove-orphans
+docker-compose -f docker-compose-with-node.yml up -d --remove-orphans

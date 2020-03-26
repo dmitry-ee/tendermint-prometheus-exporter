@@ -45,22 +45,10 @@ services:
       - back-tier
     restart: always
 
-  minter_node:
-    image: dmi7ry/minter-node:${MINTER_NODE_VERSION}
-    container_name: minter_node
-    volumes:
-      - ${MINTER_DATA_DIR}:/minter
-    # ports:
-    #   - 8841:8841
-    networks:
-      - back-tier
-
   minter_exporter:
-    image: dmi7ry/tendermint-prometheus-exporter:0.9.25
+    image: dmi7ry/tendermint-prometheus-exporter:latest
     container_name: minter_exporter
     mem_limit: 50m
-    depends_on:
-      - minter_node
     networks:
       - back-tier
     # environment:
@@ -73,4 +61,4 @@ services:
       --timeout 5000
       --target https://api.minter.one --status --net-info --
       --target http://api-01.minter.store:8841 --status --net-info --
-      --target http://minter_node:8841 --status --net-info --candidates --
+      --target http://some-node:8841 --status --net-info --candidates --
