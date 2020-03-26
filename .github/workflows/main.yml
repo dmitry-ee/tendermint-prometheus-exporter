@@ -17,7 +17,7 @@ jobs:
           echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
           echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
           echo "::set-env name=BUILD_DATE::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          echo "::set-env name=VCS_REF::$(git rev-parse --short HEAD)"
+          echo "::set-env name=COMMIT_SHORT::$(git rev-parse --short HEAD)"
 
       - name: build & push
         uses: opspresso/action-docker@master
