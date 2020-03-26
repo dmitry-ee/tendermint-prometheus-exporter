@@ -13,7 +13,8 @@ jobs:
           fetch-depth: 5
 
       - name: get version
-        run: export VERSION=$(jq -r .version src/package.json)
+        run: |
+          echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
 
       - name: build & push
         uses: opspresso/action-docker@master
