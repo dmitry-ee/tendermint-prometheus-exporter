@@ -1,6 +1,9 @@
-name: docker
+name: Mah Workflow
 
-on: push
+on:
+  push:
+    paths:
+      - 'src/**'
 
 jobs:
   docker:
@@ -12,7 +15,7 @@ jobs:
         with:
           fetch-depth: 5
 
-      - name: get version
+      - name: set envs
         run: |
           echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
           echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
