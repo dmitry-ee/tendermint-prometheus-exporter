@@ -6,7 +6,7 @@ on:
       - 'src/**'
       - 'Justfile'
       - '.github/workflows/main.yml'
-      
+
   pull_request:
     branches:
       - master
@@ -42,7 +42,7 @@ jobs:
         run: just run-test-d
 
   coveralls:
-    if: github.ref == 'refs/heads/master' OR github.head_ref
+    if: github.ref == 'refs/heads/master' || github.head_ref
     needs: [tests]
     runs-on: ubuntu-latest
     steps:
