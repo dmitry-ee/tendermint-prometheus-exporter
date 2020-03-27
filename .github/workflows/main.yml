@@ -1,34 +1,85 @@
-name: Mah Workflow
-
+name: main workflow
 
 on:
   push:
     paths:
       - 'src/**'
+      - 'Justfile'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'src/**'
+      - 'Justfile'
+      - '.github/workflows/main.yml'
 
 jobs:
-  docker:
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: install just
+        run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.1'
+
+      - name: install nyc & deps
+        run: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
+
+      - name: run npm test
+        run: just test
+
+      - name: run smoke test
+        run: just run-test-d
+
+  coveralls:
+    if: github.ref == 'refs/heads/master'
+    needs: [tests]
     runs-on: ubuntu-latest
     steps:
 
       - name: checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
         with:
-          fetch-depth: 5
+          node-version: '12.1'
 
-      - name: set envs
-        run: |
-          echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
-          echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
-          echo "::set-env name=BUILD_DATE::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          echo "::set-env name=COMMIT_SHORT::$(git rev-parse --short HEAD)"
+      - name: install nyc & deps
+        run: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
 
-      - name: build & push
-        uses: opspresso/action-docker@master
-        env:
-          USERNAME: ${{ secrets.DOCKER_HUB_USER }}
-          PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          IMAGE_NAME: "${{ secrets.DOCKER_HUB_USER }}/${{ env.APP_NAME }}"
-          LATEST: true
-          TAG_NAME: ${{ env.VERSION }}
-          DOCKER_BUILD_ARGS: "--build-arg EXPORTER_VERSION=${{ env.VERSION }} --build-arg BUILD_DATE=${{ env.BUILD_DATE }} --build-arg VCS_REF=${{ env.COMMIT_SHORT }}"
+      - name: run npm coveralls
+        run: cd src && npm run coveralls
+
+  docker:
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: install just
+        run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: docker login
+        run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
+
+      - name: docker build
+        run: just build-nc
+
+      - name: docker push version
+        run: just push
+        if: github.ref == 'refs/heads/master'
+
+      - name: docker push latest
+        run: just push-latest
+        if: github.ref == 'refs/heads/master'

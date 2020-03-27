@@ -1,0 +1,38 @@
+name: provision workflow
+
+on:
+  push:
+    paths:
+      - 'provision/**'
+
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'provision/**'
+      - '.github/workflows/provision.yml'
+
+jobs:
+
+  provision_simply:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install
+        run: cd provision && sudo ./provision-simply.sh
+
+  provision_with_node:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install
+        run: cd provision && sudo ./provision-with-node.sh
+
+      - name: check minter_node is running
+        run: docker inspect -f '{{.State.Running}}' minter_node
