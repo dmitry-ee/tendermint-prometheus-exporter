@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: install
-        run: cd provision && ./provision-simply.sh
+        run: cd provision && sudo ./provision-simply.sh
 
   provision_with_node:
     runs-on: ubuntu-latest
@@ -32,4 +32,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: install
-        run: cd provision && ./provision-with-node.sh
+        run: cd provision && sudo ./provision-with-node.sh
+
+      - name: check minter_node is running
+        run: docker inspect -f '{{.State.Running}}' minter_node
