@@ -5,6 +5,8 @@ on:
     paths:
       - 'src/**'
       - 'Justfile'
+      - '.github/workflows/main.yml'
+      
   pull_request:
     branches:
       - master

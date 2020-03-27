@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'provision/**'
+      - '.github/workflows/provision.yml'
 
   pull_request:
     branches:
