@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-set -ex
-printenv
-
-export APP_VERSION=$(grep 'version' src/package.json | sed 's/.*"version": "\(.*\)".*/\1/')
-
-docker push $IMAGE_NAME
-docker tag $IMAGE_NAME $DOCKER_REPO:$APP_VERSION
-docker push $DOCKER_REPO:$APP_VERSION

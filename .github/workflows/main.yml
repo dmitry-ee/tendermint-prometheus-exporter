@@ -1,0 +1,34 @@
+name: Mah Workflow
+
+
+on:
+  push:
+    paths:
+      - 'src/**'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 5
+
+      - name: set envs
+        run: |
+          echo "::set-env name=VERSION::$(jq -r .version src/package.json)"
+          echo "::set-env name=APP_NAME::$(jq -r .name src/package.json)"
+          echo "::set-env name=BUILD_DATE::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "::set-env name=COMMIT_SHORT::$(git rev-parse --short HEAD)"
+
+      - name: build & push
+        uses: opspresso/action-docker@master
+        env:
+          USERNAME: ${{ secrets.DOCKER_HUB_USER }}
+          PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          IMAGE_NAME: "${{ secrets.DOCKER_HUB_USER }}/${{ env.APP_NAME }}"
+          LATEST: true
+          TAG_NAME: ${{ env.VERSION }}
+          DOCKER_BUILD_ARGS: "--build-arg EXPORTER_VERSION=${{ env.VERSION }} --build-arg BUILD_DATE=${{ env.BUILD_DATE }} --build-arg VCS_REF=${{ env.COMMIT_SHORT }}"
