@@ -40,10 +40,14 @@ jobs:
         run: just run-test-d
 
   coveralls:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' OR github.head_ref
     needs: [tests]
     runs-on: ubuntu-latest
     steps:
+
+      - name: Set envs
+        run: |
+          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_REF#refs/heads/})
 
       - name: checkout
         uses: actions/checkout@v2
@@ -58,6 +62,10 @@ jobs:
 
       - name: run npm coveralls
         run: cd src && npm run coveralls
+        env:
+          COVERALLS_SERVICE_NAME: GitHub Actions
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
 
   docker:
     needs: [tests]
