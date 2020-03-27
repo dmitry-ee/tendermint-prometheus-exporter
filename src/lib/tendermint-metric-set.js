@@ -30,7 +30,7 @@ let netInfoExtractor = (netInfo, m, extractor = x => x) => {
   netInfo.forEach(v => {
     m.set({
       id: v.id, listen_addr: v.listen_addr, moniker: v.moniker, remote_ip: v.remote_ip
-	  }, v.value, extractor)
+    }, v.value, extractor)
   })
   return false
 }
@@ -52,8 +52,8 @@ const netInfoPeerMetricGen = (name, help, path, ex, addDate) => {
 
 const metrics = {
   'candidates': [
-    {	name: 'info_status',  help: 'Candidate Status',       extractPath: 'result', labelNames: ['reward_address', 'owner_address', 'pub_key', 'commission', 'created_at_block'], extractor: (v, m) => candidatesExtractor(v, m, "status") },
-    {	name: 'info_stake',   help: 'Candidate Stake Total',  extractPath: 'result', labelNames: ['reward_address', 'owner_address', 'pub_key', 'commission', 'created_at_block'], extractor: (v, m) => candidatesExtractor(v, m, "total_stake") },
+    {  name: 'info_status',  help: 'Candidate Status',       extractPath: 'result', labelNames: ['reward_address', 'owner_address', 'pub_key', 'commission', 'created_at_block'], extractor: (v, m) => candidatesExtractor(v, m, "status") },
+    {  name: 'info_stake',   help: 'Candidate Stake Total',  extractPath: 'result', labelNames: ['reward_address', 'owner_address', 'pub_key', 'commission', 'created_at_block'], extractor: (v, m) => candidatesExtractor(v, m, "total_stake") },
   ],
   'net_info': [
     { name: 'peers_connected_total', help: 'Peers Connected Total', extractPath: 'result.n_peers', metricDataType: Number },
@@ -79,13 +79,13 @@ const metrics = {
 
 class TendermintMetricSet extends MetricSet {
   constructor() {
-  	super({ prefix: 'minter', labels: { target: '', moniker: '' } })
+    super({ prefix: 'minter', labels: { target: '', moniker: '' } })
 
     keys(metrics).forEach(context => {
       metrics[context].forEach(metric => {
         super.add(context, clone(metric))
       })
-  	})
+    })
   }
 }
 
