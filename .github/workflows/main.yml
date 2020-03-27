@@ -60,6 +60,9 @@ jobs:
     needs: [tests]
     runs-on: ubuntu-latest
     steps:
+      
+      - name: install just
+        run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
 
       - name: checkout
         uses: actions/checkout@v2
