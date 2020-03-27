@@ -1,6 +1,5 @@
 name: main workflow
 
-
 on:
   push:
     paths:
@@ -12,7 +11,7 @@ on:
     paths:
       - 'src/**'
       - 'Justfile'
-      - '.github/**'
+      - '.github/workflows/main.yml'
 
 jobs:
 
