@@ -23,7 +23,7 @@ release +comment:
   git add -A
   git commit -m "{{comment}}"
   just test
-  just run test-d
+  just run-test-d
   git push origin
 
 
