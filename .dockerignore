@@ -6,3 +6,5 @@ provision
 src/node_modules
 src/coverage
 .git
+src/test
+src/.*

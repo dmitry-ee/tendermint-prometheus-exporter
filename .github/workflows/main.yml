@@ -6,6 +6,8 @@ on:
       - 'src/**'
       - 'Justfile'
       - '.github/workflows/main.yml'
+      - 'Dockerfile'
+      - '.dockerignore'
 
   pull_request:
     branches:
