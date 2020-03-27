@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": 1,
-  "iteration": 1585302351889,
+  "iteration": 1585310997592,
   "links": [],
   "panels": [
     {
@@ -1027,7 +1027,7 @@
       },
       "lines": true,
       "linewidth": 1,
-      "nullPointMode": "null",
+      "nullPointMode": "null as zero",
       "options": {
         "dataLinks": []
       },
@@ -1041,7 +1041,7 @@
       "steppedLine": true,
       "targets": [
         {
-          "expr": "max(time() - minter_status_latest_block_time{target=~\"$api\"}/1000 <= bool 60) by (target) == bool 0",
+          "expr": "min(time() - minter_status_latest_block_time{target=~\"$api\"}/1000 <= bool 60) by (target) == bool 1",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -1053,7 +1053,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Blockchain Out Of Sync",
+      "title": "Blockchain In Sync (by api)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1114,7 +1114,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 20
           },
           "hiddenSeries": false,
           "id": 23,
@@ -1206,7 +1206,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 11
+            "y": 28
           },
           "hiddenSeries": false,
           "id": 24,
@@ -2563,6 +2563,7 @@
       },
       "yaxes": [
         {
+          "decimals": 0,
           "format": "none",
           "label": "",
           "logBase": 1,
@@ -2673,5 +2674,5 @@
   "variables": {
     "list": []
   },
-  "version": 2
+  "version": 3
 }
