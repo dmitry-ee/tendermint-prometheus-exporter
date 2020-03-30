@@ -53,10 +53,10 @@ jobs:
         run: |
           echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_REF#refs/heads/})
 
-      - name: override branch for PR's
-        run: |
-          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_HEAD_REF})
-        if: github.event_name == 'pull_request'
+      # - name: override branch for PR's
+      #   run: |
+      #     echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_HEAD_REF})
+      #   if: github.event_name == 'pull_request'
 
       - name: checkout
         uses: actions/checkout@v2
