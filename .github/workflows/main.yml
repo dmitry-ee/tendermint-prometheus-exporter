@@ -81,8 +81,17 @@ jobs:
     needs: [tests]
     runs-on: ubuntu-latest
     steps:
+
+      - name: set envs
+        run: |
+          echo ::set-env name=VERSION::$(jq -r .version src/package.json)
+
+      # https://github.com/marketplace/actions/sonar-scanner
+      # https://github.com/SonarSource/sonar-scanner-cli/releases
       - name: setup sonarqube
         uses: warchant/setup-sonar-scanner@v1
+        with:
+          version: 4.3.0.2102
 
       - name: run sonarqube
         env:
@@ -93,6 +102,8 @@ jobs:
              -Dsonar.organization=dmitry-ee
              -Dsonar.host.url=https://sonarcloud.io/
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
+             -Dsonar.projectVersion=${{ env.VERSION }}
+             -Dsonar.verbose=true
 
   docker:
     needs: [tests]
