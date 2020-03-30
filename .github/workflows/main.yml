@@ -81,10 +81,18 @@ jobs:
     needs: [tests]
     runs-on: ubuntu-latest
     steps:
-      - uses: sonarsource/sonarcloud-github-action@master
+      - name: setup sonarqube
+        uses: warchant/setup-sonar-scanner@v1
+
+      - name: run sonarqube
         env:
+          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: sonar-scanner
+             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+             -Dsonar.organization=dmitry-ee
+             -Dsonar.host.url=https://sonarcloud.io/
+             -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
 
   docker:
     needs: [tests]
