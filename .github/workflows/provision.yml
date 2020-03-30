@@ -16,6 +16,8 @@ on:
 jobs:
 
   provision_simply:
+    env:
+      NODE_SLEEP_TIMEOUT_SEC: 10
     runs-on: ubuntu-latest
     steps:
 
@@ -25,7 +27,23 @@ jobs:
       - name: install
         run: cd provision && sudo ./provision-simply.sh
 
+      - name: check minter_node is running after ${{ env.NODE_SLEEP_TIMEOUT_SEC }}
+        run: |
+          sleep $NODE_SLEEP_TIMEOUT_SEC
+          echo ::set-env name=MINTER_EXPORTER_RUN_STATUS::$(./.github/workflows/check-container-state.sh minter_exporter)
+          echo ::set-env name=GRAFANA_RUN_STATUS::$(./.github/workflows/check-container-state.sh grafana)
+          echo ::set-env name=PROM_NODE_RUN_STATUS::$(./.github/workflows/check-container-state.sh prometheus)
+
+      - name: fail if something went wrong
+        run: |
+          docker logs minter_exporter
+          docker logs prometheus
+          docker logs grafana
+        if: $MINTER_EXPORTER_RUN_STATUS != 0 || $GRAFANA_RUN_STATUS != 0 || $PROM_NODE_RUN_STATUS != 0
+
   provision_with_node:
+    env:
+      NODE_SLEEP_TIMEOUT_SEC: 10
     runs-on: ubuntu-latest
     steps:
 
@@ -35,5 +53,18 @@ jobs:
       - name: install
         run: cd provision && sudo ./provision-with-node.sh
 
-      - name: check minter_node is running
-        run: docker inspect -f '{{.State.Running}}' minter_node
+      - name: check minter_node is running after ${{ env.NODE_SLEEP_TIMEOUT_SEC }}
+        run: |
+          sleep $NODE_SLEEP_TIMEOUT_SEC
+          echo ::set-env name=MINTER_NODE_RUN_STATUS::$(./.github/workflows/check-container-state.sh minter_node)
+          echo ::set-env name=MINTER_EXPORTER_RUN_STATUS::$(./.github/workflows/check-container-state.sh minter_exporter)
+          echo ::set-env name=GRAFANA_RUN_STATUS::$(./.github/workflows/check-container-state.sh grafana)
+          echo ::set-env name=PROM_NODE_RUN_STATUS::$(./.github/workflows/check-container-state.sh prometheus)
+
+      - name: fail if something went wrong
+        run: |
+          docker logs minter_node
+          docker logs minter_exporter
+          docker logs prometheus
+          docker logs grafana
+        if: $MINTER_NODE_RUN_STATUS != 0 || $MINTER_EXPORTER_RUN_STATUS != 0 || $GRAFANA_RUN_STATUS != 0 || $PROM_NODE_RUN_STATUS != 0
