@@ -71,6 +71,18 @@ jobs:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
 
+  sonar:
+    if: github.ref == 'refs/heads/master' || github.head_ref
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          projectBaseDir: my-custom-directory
+
   docker:
     needs: [tests]
     runs-on: ubuntu-latest
