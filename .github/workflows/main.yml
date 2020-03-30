@@ -55,7 +55,7 @@ jobs:
 
       - name: override branch for PR's
         run: |
-          echo ::set-env name=CURRENT_BRANCH::$(echo $GITHUB_SOURCE_REF)
+          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_SOURCE_REF})
         if: github.event_name == 'pull_request'
 
       - name: checkout
