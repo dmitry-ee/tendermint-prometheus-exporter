@@ -55,7 +55,7 @@ jobs:
 
       - name: override branch for PR's
         run: |
-          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_BASE_REF})
+          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_HEAD_REF})
         if: github.event_name == 'pull_request'
 
       - name: checkout
@@ -85,7 +85,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          
+        with:
+          projectBaseDir: ./src
+
   docker:
     needs: [tests]
     runs-on: ubuntu-latest
