@@ -105,8 +105,6 @@ jobs:
              -Dsonar.host.url=https://sonarcloud.io/
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
-             -Dsonar.verbose=true
-             -Dsonar.sources=.
 
   docker:
     needs: [tests]
