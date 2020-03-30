@@ -86,6 +86,9 @@ jobs:
         run: |
           echo ::set-env name=VERSION::$(jq -r .version src/package.json)
 
+      - name: checkout
+        uses: actions/checkout@v2
+
       # https://github.com/marketplace/actions/sonar-scanner
       # https://github.com/SonarSource/sonar-scanner-cli/releases
       - name: setup sonarqube
@@ -95,7 +98,6 @@ jobs:
 
       - name: run sonarqube
         env:
-          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
              -Dsonar.login=${{ secrets.SONAR_TOKEN }}
@@ -104,6 +106,7 @@ jobs:
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
              -Dsonar.verbose=true
+             -Dsonar.sources=.
 
   docker:
     needs: [tests]
