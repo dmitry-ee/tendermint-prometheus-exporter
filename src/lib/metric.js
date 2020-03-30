@@ -81,8 +81,9 @@ class Metric {
         if (newLabels[k])
           this._labels[k] = newLabels[k]
       })
-    } else
+    } else {
       this._labels = assign({}, clone(this._labels), newLabels)
+    }
 
     this._syncLabels()
     return true
