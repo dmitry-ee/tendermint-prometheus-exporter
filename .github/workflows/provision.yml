@@ -39,7 +39,7 @@ jobs:
           docker logs minter_exporter
           docker logs prometheus
           docker logs grafana
-        if: $MINTER_EXPORTER_RUN_STATUS != 0 || $GRAFANA_RUN_STATUS != 0 || $PROM_NODE_RUN_STATUS != 0
+        if: ${{ env.MINTER_EXPORTER_RUN_STATUS }} != 0 || ${{ env.GRAFANA_RUN_STATUS }} != 0 || ${{ env.PROM_NODE_RUN_STATUS }} != 0
 
   provision_with_node:
     env:
@@ -67,4 +67,4 @@ jobs:
           docker logs minter_exporter
           docker logs prometheus
           docker logs grafana
-        if: $MINTER_NODE_RUN_STATUS != 0 || $MINTER_EXPORTER_RUN_STATUS != 0 || $GRAFANA_RUN_STATUS != 0 || $PROM_NODE_RUN_STATUS != 0
+        if: ${{ env.MINTER_NODE_RUN_STATUS }} != 0 || ${{ env.MINTER_EXPORTER_RUN_STATUS }} != 0 || ${{ env.GRAFANA_RUN_STATUS }} != 0 || ${{ env.PROM_NODE_RUN_STATUS }} != 0
