@@ -13,25 +13,25 @@ let simpleLabelExtractor = (value, metric, label) => {
 }
 
 let candidatesExtractor = (candidates, m, fieldToExtract) => {
-  if (!isArray(candidates))
-    return false
+  if (isArray(candidates)) {
 
-  candidates.forEach(v => {
-    if (v[`${fieldToExtract}`] !== undefined)
-      m.set({ reward_address : v.reward_address, owner_address: v.owner_address, pub_key: v.pub_key, commission: v.commission, created_at_block: v.created_at_block || -1 }, v[`${fieldToExtract}`], x => parseInt(x))
-  })
+    candidates.forEach(v => {
+      if (v[`${fieldToExtract}`] !== undefined)
+        m.set({ reward_address : v.reward_address, owner_address: v.owner_address, pub_key: v.pub_key, commission: v.commission, created_at_block: v.created_at_block || -1 }, v[`${fieldToExtract}`], x => parseInt(x))
+    })
+  }
   return false
 }
 
 let netInfoExtractor = (netInfo, m, extractor = x => x) => {
-  if (!isArray(netInfo))
-    return false
+  if (isArray(netInfo)) {
 
-  netInfo.forEach(v => {
-    m.set({
-      id: v.id, listen_addr: v.listen_addr, moniker: v.moniker, remote_ip: v.remote_ip
-    }, v.value, extractor)
-  })
+    netInfo.forEach(v => {
+      m.set({
+        id: v.id, listen_addr: v.listen_addr, moniker: v.moniker, remote_ip: v.remote_ip
+      }, v.value, extractor)
+    })
+  }
   return false
 }
 
