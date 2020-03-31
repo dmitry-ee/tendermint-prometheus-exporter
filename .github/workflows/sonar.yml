@@ -24,13 +24,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: set envs
-        run: |
-          echo ::set-env name=VERSION::$(jq -r .version src/package.json)
-
       - name: checkout
         uses: actions/checkout@v2
       - run: git fetch --prune --unshallow
+
+      - name: set envs
+        run: |
+          echo ::set-env name=VERSION::$(jq -r .version src/package.json)
 
       - name: setup node
         uses: actions/setup-node@v1
@@ -59,4 +59,4 @@ jobs:
              -Dsonar.host.url=https://sonarcloud.io/
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
-             -Dsonar.javascript.lcov.reportPaths=src/coverage/
+             -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info

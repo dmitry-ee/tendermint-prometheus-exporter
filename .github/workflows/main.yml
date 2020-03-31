@@ -49,10 +49,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: set envs
-        run: |
-          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_REF#refs/heads/})
-
       # - name: override branch for PR's
       #   run: |
       #     echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_HEAD_REF})
@@ -60,6 +56,10 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: set envs
+        run: |
+          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_REF#refs/heads/})
 
       - name: setup node
         uses: actions/setup-node@v1
