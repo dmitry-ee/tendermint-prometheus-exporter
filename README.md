@@ -71,7 +71,7 @@ just build-nc
 | -- | -- | -- |
 | port | 9697 | port to listen at (should be exposed with -p arg) |
 | timeout | 1000 | max response time to exporter waiting for in milliseconds |
-| target | null | api url to scrape (for Minter it's a port 8841) |
+| target | null | API url to scrape (port for Minter = 8841, for Cosmos = 26657) |
 | status or no-status | false | enable scrape for /status url |
 | net-info or no-net-info | false | enable scrape for /net_info url |
 | candidates or no-candidates | false | enable scrape for /candidates url |
@@ -90,7 +90,7 @@ then run:
 
 See [provision with node](provision/provision-with-node.sh) and [provision simply](provision/provision-simply.sh)
 
-Check & Set Minter Api urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
+Check & Set Minter API urls [here](provision/docker-compose-with-node.yml#L74) or [here](provision/docker-compose-simply.yml#L62)
 
 For manual dashboard import see [Grafana Dashboard](provision/grafana/minter-dashboard.json))
 
@@ -108,7 +108,7 @@ Supported urls:
 [here](stubs/minter-metrics.txt)
 
 ### Cosmos
-**NOTE:** Cosmos is not fully supported yet
+**NOTE: Cosmos is not supported yet**
 
 Supported urls:
 - **/net_info** enables with `--net-info` flag
