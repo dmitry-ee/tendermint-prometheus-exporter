@@ -74,7 +74,7 @@ jobs:
         env:
           COVERALLS_SERVICE_NAME: GitHub Actions
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          # COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
+          COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
 
   docker:
     needs: [tests]
