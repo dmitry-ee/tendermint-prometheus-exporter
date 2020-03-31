@@ -30,6 +30,7 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
 
       - name: setup node
         uses: actions/setup-node@v1
@@ -58,4 +59,4 @@ jobs:
              -Dsonar.host.url=https://sonarcloud.io/
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
-             -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov-report
+             -Dsonar.javascript.lcov.reportPaths=src/coverage/
