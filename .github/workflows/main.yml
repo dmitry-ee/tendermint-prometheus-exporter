@@ -78,6 +78,7 @@ jobs:
              -Dsonar.sources=src
              -Dsonar.tests=src/test
              -Dsonar.test.inclusions=**/src/tests/*.test.js
+             -Dsonar.language=js
         if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
 
   docker:
