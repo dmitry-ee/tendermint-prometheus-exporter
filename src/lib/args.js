@@ -59,14 +59,14 @@ let buildScrapeTargets = argv => {
   return argv
 }
 
-let parseNrun = (cmd = "", callback) => {
-  if (!cmd || cmd == "")
-    cmd = process.argv.slice(2).join(' ')
+let parseNrun = (startCommand = "", callback = function(){} ) => {
+  if (!startCommand || startCommand == "")
+    startCommand = process.argv.slice(2).join(' ')
 
   var finalArgv = {}
   var finalErr = []
 
-  cmd.split(/\s+--\s+/).forEach(cmd => {
+  startCommand.split(/\s+--\s+/).forEach(cmd => {
     _parser.parse(cmd, (err, argv) => {
       assignWith(finalArgv, argv, (val, src) => {
         if (!isUndefined(val) && !isUndefined(src)) {
