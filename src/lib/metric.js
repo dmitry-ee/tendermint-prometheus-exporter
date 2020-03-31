@@ -89,7 +89,7 @@ class Metric {
     return true
   }
 
-  set(additionalLabels = {}, extractObject, currentExtractor) {
+  set(additionalLabels, extractObject, currentExtractor) {
     if (!this._initPrometheusMetric && isUndefined(this._metric))
       this.init()
 

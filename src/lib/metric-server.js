@@ -51,8 +51,8 @@ class MetricServer {
 
   run(callback) {
     let self = this
-    self._app.use((req, res, next) => {
-      let seq = new ConnectSequence(req, res, next)
+    self._app.use((appReq, appRes, appNext) => {
+      let seq = new ConnectSequence(appReq, appRes, appNext)
       seq.append((req, res, next) => {
         logger.info(`request: ${req.baseUrl}${req.originalUrl}`)
         if (!/^\/metrics(\.json)?$/.test(req.originalUrl)) {
@@ -64,7 +64,7 @@ class MetricServer {
         return next()
       })
       seq.append(self.asyncScraperBuilder(self._targets, self._metrics, self._timeout))
-      seq.append(self._api.bind(null, req, res))
+      seq.append(self._api.bind(null, appReq, appRes))
       seq.run()
     })
 
