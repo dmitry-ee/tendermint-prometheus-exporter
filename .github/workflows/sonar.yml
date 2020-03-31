@@ -1,0 +1,51 @@
+name: sonar
+
+on: push
+
+jobs:
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: install just
+        run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin
+
+      - name: checkout
+        uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
+
+      - name: set envs
+        run: |
+          echo ::set-env name=VERSION::$(jq -r .version src/package.json)
+          echo ::set-env name=CURRENT_BRANCH::$(echo ${GITHUB_REF#refs/heads/})
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.1'
+
+      - name: install nyc & deps
+        run: cd src && npm i nyc@15.0.0 -g && npm i --save-dev
+
+      - name: run npm test
+        run: just test
+
+      # https://github.com/marketplace/actions/sonar-scanner
+      # https://github.com/SonarSource/sonar-scanner-cli/releases
+      - name: setup sonarqube
+        uses: warchant/setup-sonar-scanner@v1
+        with:
+          version: 4.3.0.2102
+
+      - name: run sonarqube
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: sonar-scanner
+             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+             -Dsonar.organization=dmitry-ee
+             -Dsonar.host.url=https://sonarcloud.io/
+             -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
+             -Dsonar.projectVersion=${{ env.VERSION }}
+             -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
+             -Dsonar.test.exclusions=**/test/**
