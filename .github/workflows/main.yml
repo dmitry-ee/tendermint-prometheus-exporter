@@ -74,37 +74,7 @@ jobs:
         env:
           COVERALLS_SERVICE_NAME: GitHub Actions
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
-
-  sonar:
-    if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
-    needs: [tests]
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: set envs
-        run: |
-          echo ::set-env name=VERSION::$(jq -r .version src/package.json)
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      # https://github.com/marketplace/actions/sonar-scanner
-      # https://github.com/SonarSource/sonar-scanner-cli/releases
-      - name: setup sonarqube
-        uses: warchant/setup-sonar-scanner@v1
-        with:
-          version: 4.3.0.2102
-
-      - name: run sonarqube
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: sonar-scanner
-             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-             -Dsonar.organization=dmitry-ee
-             -Dsonar.host.url=https://sonarcloud.io/
-             -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
-             -Dsonar.projectVersion=${{ env.VERSION }}
+          # COVERALLS_GIT_BRANCH: ${{ env.CURRENT_BRANCH }}
 
   docker:
     needs: [tests]
