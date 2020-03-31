@@ -39,8 +39,7 @@ jobs:
           version: 4.3.0.2102
 
 
-      - run: |
-        ls -lR
+      - run: ls -lR
 
       - name: run sonarqube
         env:
