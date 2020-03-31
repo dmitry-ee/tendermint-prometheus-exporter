@@ -20,10 +20,10 @@ alias bump := increment-version
 # tight everything up, commit, test and release
 release +comment:
   @echo "{{comment}}"
-  git add -A
-  git commit -m "{{comment}}"
   just test
   just run-test-d
+  git add -A
+  git commit -m "{{comment}}"
   git push origin
 
 

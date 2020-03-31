@@ -80,7 +80,7 @@ class MetricServer {
       if (self._metricsRetention) {
         logger.warn(`Setting retention timeout for ${self._metricsRetention} ms. (${self._metricsRetention/1000/60} min.)`)
         self._asyncTimer = setIntervalAsync(() => {
-          logger.warn('Metrics retenton...'),
+          logger.warn('Metrics retenton...')
           register.resetMetrics()
         }, self._metricsRetention)
       }
@@ -133,13 +133,13 @@ class MetricServer {
               metrics.setLabels({ moniker: moniker, target: target })
               metrics.set('status', { moniker: moniker, target: target }, response.body)
 
-            } if (response.url && /\/candidates$/.test(response.url)) {
+            } else if (response.url && /\/candidates$/.test(response.url)) {
 
               let target = response.url.replace(/\/candidates$/, '')
               metrics.setLabels({ target: target })
               metrics.set('candidates', { target: target }, response.body)
 
-            } if (response.url && /\/net_info$/.test(response.url)) {
+            } else if (response.url && /\/net_info$/.test(response.url)) {
 
               let target = response.url.replace(/\/net_info$/, '')
               metrics.setLabels({ target: target })
