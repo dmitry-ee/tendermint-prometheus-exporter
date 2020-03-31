@@ -77,7 +77,7 @@ jobs:
              -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
              -Dsonar.sources=src
              -Dsonar.tests=src
-             -Dsonar.test.inclusions=**/*.test.js
+             -Dsonar.test.inclusions=**/*.test.js,**/*.smoketest.js
              -Dsonar.exlusions=src/index.js
              -Dsonar.language=js
         if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
