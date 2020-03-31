@@ -76,9 +76,9 @@ jobs:
              -Dsonar.projectVersion=${{ env.VERSION }}
              -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
              -Dsonar.sources=src
-             -Dsonar.tests=src/test
-             -Dsonar.test.inclusions=src/tests/*.test.js
-             -Dsonar.exlusions=src/index.js,src/tests/*.test.js
+             -Dsonar.tests=src
+             -Dsonar.test.inclusions=**/*.test.js
+             -Dsonar.exlusions=src/index.js
              -Dsonar.language=js
         if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
 
