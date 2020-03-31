@@ -75,6 +75,7 @@ jobs:
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
              -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
+             -Dsonar.test.exclusions=src/test/**
         if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
 
   docker:
