@@ -38,6 +38,10 @@ jobs:
         with:
           version: 4.3.0.2102
 
+
+      - run: |
+        ls -lR
+
       - name: run sonarqube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,4 +52,4 @@ jobs:
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
              -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
-             -Dsonar.test.exclusions=test/**
+             -Dsonar.test.exclusions=**/test/**/*
