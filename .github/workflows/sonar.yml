@@ -48,4 +48,4 @@ jobs:
              -Dsonar.projectKey=dmitry-ee_tendermint-prometheus-exporter
              -Dsonar.projectVersion=${{ env.VERSION }}
              -Dsonar.javascript.lcov.reportPaths=src/coverage/lcov.info
-             -Dsonar.test.exclusions=**/test/**
+             -Dsonar.test.exclusions=test/**
