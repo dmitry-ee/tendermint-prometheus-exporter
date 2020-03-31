@@ -3,6 +3,7 @@
 ![Language](https://img.shields.io/badge/language-nodejs-red.svg)
 [![Version](https://images.microbadger.com/badges/version/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter/tags?page=1&ordering=last_updated)
 [![Coverage Status](https://coveralls.io/repos/github/dmitry-ee/tendermint-prometheus-exporter/badge.svg?branch=master)](https://coveralls.io/github/dmitry-ee/tendermint-prometheus-exporter?branch=master)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=dmitry-ee_tendermint-prometheus-exporter&metric=security_rating)](https://sonarcloud.io/dashboard?id=dmitry-ee_tendermint-prometheus-exporter)
 [![Build Automation](https://img.shields.io/docker/cloud/automated/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter)
 [![Image Pulls](https://img.shields.io/docker/pulls/dmi7ry/tendermint-prometheus-exporter.svg)](https://hub.docker.com/r/dmi7ry/tendermint-prometheus-exporter/tags?page=1&ordering=last_updated)
 
