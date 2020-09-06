@@ -6,13 +6,12 @@ FROM  mhart/alpine-node:slim-12.1
 ARG   APP_DIR=/app
 LABEL version=${EXPORTER_VERSION} \
       org.label-schema.vcs-ref=${VCS_REF} \
-      org.label-schema.vcs-url="https://github.com/dmitry-ee/tendermint-prometheus-exporter"
-
-MAINTAINER Dmitry E <https://github.com/dmitry-ee>
+      org.label-schema.vcs-url="https://github.com/dmitry-ee/tendermint-prometheus-exporter" \
+      maintainer="Dmitry E <https://github.com/dmitry-ee>"
+     
 WORKDIR $APP_DIR
 
-RUN   apk add --no-cache tini && \
-      rm -rf /lib/apk/db
+RUN   apk add --no-cache tini
 
 COPY  --from=builder /node_modules  ${APP_DIR}/node_modules
 ADD   src/ ${APP_DIR}
