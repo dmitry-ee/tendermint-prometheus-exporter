@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": 1,
-  "iteration": 1585310997592,
+  "iteration": 1587037609612,
   "links": [],
   "panels": [
     {
@@ -2531,7 +2531,7 @@
       },
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": false,
+      "stack": true,
       "steppedLine": false,
       "targets": [
         {
@@ -2567,7 +2567,7 @@
           "format": "none",
           "label": "",
           "logBase": 1,
-          "max": "1",
+          "max": null,
           "min": "0",
           "show": true
         },
@@ -2674,5 +2674,5 @@
   "variables": {
     "list": []
   },
-  "version": 3
+  "version": 1
 }
